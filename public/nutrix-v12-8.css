@@ -1,0 +1,164 @@
+/* Nutrix Pro V12.8 — theme fixes + minimal AI */
+/* 1) headings: softer movement + thinner underline */
+.section-title,
+.nutri-card-head h3,
+.v111-about h2,
+.ai-heading h2,
+.nx-hero-title,
+.hero h1,
+.hero h2,
+.v11-ai-top strong{letter-spacing:-.03em!important}
+.section-title::after,
+.nutri-card-head h3::after,
+.v111-about h2::after,
+.ai-heading h2::after,
+.nx-hero-title::after{
+  height:2px!important;
+  opacity:.92;
+  animation:nx-title-float 5.8s ease-in-out infinite!important;
+}
+.section-title::after{width:74px!important}
+.nutri-card-head h3::after,.v111-about h2::after,.ai-heading h2::after,.nx-hero-title::after{width:66px!important}
+@keyframes nx-title-float{0%,100%{transform:translateX(0);opacity:.85}50%{transform:translateX(5px);opacity:1}}
+
+/* 2) light mode text contrast fixes */
+body:not(.dark) .nx-section-hero,
+body:not(.dark) .v111-about,
+body:not(.dark) .card,
+body:not(.dark) .v10-panel,
+body:not(.dark) .explore-panel,
+body:not(.dark) .nutri-results-card{color:#17382b!important}
+body:not(.dark) .nx-hero-title,
+body:not(.dark) .section-title,
+body:not(.dark) .v111-about h2,
+body:not(.dark) .nutri-card-head h3,
+body:not(.dark) .hero h1,
+body:not(.dark) .hero h2{color:#153529!important}
+body:not(.dark) .muted,
+body:not(.dark) .nx-hero-text,
+body:not(.dark) .v111-about p,
+body:not(.dark) .ai-stat-caption{color:#5e766a!important}
+body:not(.dark) .nx-hero-badge,
+body:not(.dark) .nx-hero-kicker,
+body:not(.dark) .nx-hero-point{color:#153529!important;background:rgba(255,255,255,.88)!important;border-color:rgba(21,53,41,.08)!important}
+body:not(.dark) #v11-ai-drawer,
+body:not(.dark) #v11-ai-body .ai-chat,
+body:not(.dark) #v11-ai-body .ai-compose,
+body:not(.dark) .nx-ai-attach-pill{color:#17382b!important}
+
+/* 3) dark mode stronger fixes for image/text side */
+body.dark .nx-section-hero,
+body.dark .v111-about,
+body.dark .card,
+body.dark .v10-panel,
+body.dark .explore-panel,
+body.dark .nutri-results-card,
+html[data-theme="dark"] .nx-section-hero,
+html[data-theme="dark"] .v111-about,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .v10-panel,
+html[data-theme="dark"] .explore-panel,
+html[data-theme="dark"] .nutri-results-card{
+  background:linear-gradient(180deg,rgba(20,29,24,.96),rgba(16,23,20,.98))!important;
+  color:#edf6f0!important;
+  border-color:rgba(141,199,169,.12)!important;
+}
+body.dark .nx-hero-title,
+body.dark .section-title,
+body.dark .v111-about h2,
+body.dark .nutri-card-head h3,
+body.dark .hero h1,
+body.dark .hero h2,
+html[data-theme="dark"] .nx-hero-title,
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .v111-about h2,
+html[data-theme="dark"] .nutri-card-head h3,
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .hero h2{color:#f3faf5!important}
+body.dark .muted,
+body.dark .nx-hero-text,
+body.dark .v111-about p,
+body.dark .hero p,
+body.dark .ai-stat-caption,
+html[data-theme="dark"] .muted,
+html[data-theme="dark"] .nx-hero-text,
+html[data-theme="dark"] .v111-about p,
+html[data-theme="dark"] .hero p,
+html[data-theme="dark"] .ai-stat-caption{color:#b2c5ba!important}
+body.dark .nx-hero-photo-shell,
+html[data-theme="dark"] .nx-hero-photo-shell{background:rgba(28,40,34,.92)!important;border:1px solid rgba(141,199,169,.12)!important}
+body.dark .nx-hero-badge,
+body.dark .nx-hero-kicker,
+body.dark .nx-hero-point,
+html[data-theme="dark"] .nx-hero-badge,
+html[data-theme="dark"] .nx-hero-kicker,
+html[data-theme="dark"] .nx-hero-point{background:rgba(26,37,31,.92)!important;color:#eff7f2!important;border-color:rgba(141,199,169,.12)!important}
+body.dark .nx-hero-photo,
+html[data-theme="dark"] .nx-hero-photo{filter:brightness(.84) contrast(1.08)!important}
+body.dark .ai-stat,
+html[data-theme="dark"] .ai-stat{background:#203027!important;border-color:#31453a!important;color:#edf6f0!important}
+body.dark #v11-ai-body .ai-message.assistant .ai-bubble,
+html[data-theme="dark"] #v11-ai-body .ai-message.assistant .ai-bubble{background:#25362d!important;color:#edf6f0!important;border-color:#31453a!important}
+body.dark #v11-ai-body .ai-message.user .ai-bubble,
+html[data-theme="dark"] #v11-ai-body .ai-message.user .ai-bubble{background:#2b6b52!important;color:#fff!important;border-color:#2b6b52!important}
+
+/* 4) minimal AI — no extra text blocks */
+#page-ai{display:none!important}
+#v11-ai-body .ai-disclaimer,
+#v11-ai-body .ai-label,
+#v11-ai-body .ai-suggestions{display:none!important}
+#v11-ai-body .ai-shell.nx-ai-minimal-shell{gap:12px!important}
+#v11-ai-body .ai-overview{margin-top:0!important}
+.nx-ai-identity{display:flex;align-items:center;gap:12px}
+.nx-ai-robot{width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(127,200,157,.18),rgba(244,200,111,.16));color:#1b6b52;box-shadow:0 10px 26px rgba(18,52,39,.08);animation:nx-ai-robot-float 4.8s ease-in-out infinite}
+.nx-ai-robot svg{width:26px;height:26px}
+.ai-heading .ai-eyebrow{font-size:11px!important;letter-spacing:.22em!important}
+.ai-heading h2{margin:0!important}
+.ai-heading p{display:none!important}
+@keyframes nx-ai-robot-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* 5) icon-only controls similar to chat style */
+#v11-ai-body .ai-compose{grid-template-columns:auto 1fr auto!important;gap:8px!important}
+.nx-ai-icon-btn,
+#v11-ai-body .ai-compose button[type='submit']{
+  width:46px;height:46px;min-width:46px;border-radius:14px;
+  display:grid;place-items:center;padding:0!important;
+  border:1px solid rgba(22,56,43,.10);background:rgba(255,255,255,.90);color:#17382b;
+  box-shadow:0 8px 18px rgba(17,43,33,.05);cursor:pointer;
+  transition:transform .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.nx-ai-icon-btn:hover,
+#v11-ai-body .ai-compose button[type='submit']:hover{transform:translateY(-2px)}
+.nx-ai-icon-btn.is-active{background:#1d6b51;color:#fff;border-color:#1d6b51}
+.nx-ai-icon-btn svg,
+#v11-ai-body .ai-compose button[type='submit'] svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nx-ai-actions{display:flex!important;align-items:center;gap:8px;justify-content:flex-end}
+.nx-ai-dock{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:10px;margin-top:4px}
+.nx-ai-meta{flex:1 1 auto}
+.nx-ai-attach-pill{padding:8px 12px!important}
+
+/* 6) no navigation away, drawer style only */
+.sidebar .tab[data-tab="ai"],
+#page-ai .ai-shell{display:none!important}
+#v11-ai-launch{animation:nx-ai-launch-float 4.4s ease-in-out infinite}
+@keyframes nx-ai-launch-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* 7) dark mode AI controls */
+body.dark .nx-ai-robot,
+html[data-theme="dark"] .nx-ai-robot{color:#d7ebdf;background:linear-gradient(135deg,rgba(127,200,157,.22),rgba(217,193,120,.16))}
+body.dark .nx-ai-icon-btn,
+body.dark #v11-ai-body .ai-compose button[type='submit'],
+html[data-theme="dark"] .nx-ai-icon-btn,
+html[data-theme="dark"] #v11-ai-body .ai-compose button[type='submit']{background:rgba(27,39,32,.94)!important;color:#edf6f0!important;border-color:rgba(141,199,169,.14)!important;box-shadow:none!important}
+body.dark .nx-ai-icon-btn.is-active,
+html[data-theme="dark"] .nx-ai-icon-btn.is-active{background:#7fc89d!important;color:#10261d!important;border-color:#7fc89d!important}
+body.dark .nx-ai-attach-pill,
+html[data-theme="dark"] .nx-ai-attach-pill{background:rgba(26,37,31,.92)!important;color:#edf6f0!important;border-color:rgba(141,199,169,.14)!important}
+
+/* 8) mobile */
+@media(max-width:760px){
+  .nx-ai-robot{width:46px;height:46px;border-radius:16px}
+  .nx-ai-dock{gap:8px;align-items:flex-start!important}
+  .nx-ai-actions{gap:6px}
+  .nx-ai-icon-btn,#v11-ai-body .ai-compose button[type='submit']{width:42px;height:42px;min-width:42px;border-radius:13px}
+}

@@ -1,0 +1,17 @@
+/* V12.13 layout repair: score and kcal only on Accueil; macros in Sante */
+#page-home .nx-fitness-summary{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:18px!important}
+#page-home .nx-fit-stat{min-height:235px!important;justify-content:center!important;padding:25px 29px!important;box-sizing:border-box!important}
+#page-home .nx-fit-score strong,#page-home .nx-fit-cal strong{display:inline-flex!important;align-items:baseline!important;min-width:0!important;color:var(--text,#153528)!important;font-family:inherit!important;font-size:clamp(36px,4vw,58px)!important;letter-spacing:-.06em!important;line-height:1.14!important;white-space:nowrap!important;opacity:1!important}
+#page-home .nx-fit-line{height:11px!important;flex:none!important}
+#page-home .v10-dashboard{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important}
+#page-health>.block:has(.hero){display:none!important}
+#page-health .health-intro{display:none!important}
+#page-health .health-essential-grid{margin-top:10px!important}
+#page-health .health-essential-block:has(#score){display:none!important}
+#page-health .nx-health-macro-block{grid-column:1/-1!important}
+#page-health .nx-health-macro-block .nx-fit-stat{min-height:135px!important}
+#page-health .health-essential-block:has(#ring-main){grid-column:1/-1!important}
+#page-health .health-essential-block:has(#ring-main)>.card{min-height:230px!important}
+#page-home .v10-scan-panel{min-height:265px!important}
+@media(max-width:860px){#page-home .v10-dashboard{grid-template-columns:1fr!important}#page-home .nx-fit-stat{min-height:185px!important;padding:19px!important}}
+@media(max-width:540px){#page-home .nx-fitness-summary{gap:10px!important}#page-home .nx-fit-stat{min-height:180px!important;padding:13px!important}#page-home .nx-fit-score strong,#page-home .nx-fit-cal strong{font-size:35px!important}#page-home .nx-score-main{gap:5px!important}#page-health .nx-health-macros{grid-template-columns:1fr!important}}

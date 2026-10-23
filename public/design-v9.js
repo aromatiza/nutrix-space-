@@ -1,0 +1,7 @@
+/* V9 orchestration: original features remain handled by V5 modules. */
+(()=>{'use strict';
+function navigate(tab){document.querySelector(`.tab[data-tab="${tab}"]`)?.click();window.scrollTo({top:0,behavior:'smooth'});}
+function summary(){try {const date=typeof current!=='undefined'?current:new Date().toISOString().slice(0,10);const t=typeof totals==='function'?totals(date):null;for(const [id,key] of [['v9-today-kcal','kcal'],['v9-today-p','p'],['v9-today-f','f']]) {const node=document.getElementById(id);if(node)node.textContent=t?Math.round(Number(t[key]||0)).toLocaleString('fr-FR'):'—';}}catch(e){/* state not yet available */}}
+document.querySelectorAll('[data-v9-action]').forEach(b=>b.addEventListener('click',()=>{const a=b.dataset.v9Action;if(a==='health')navigate('health');else if(a==='ai')navigate('ai');else if(a==='lab'){navigate('journal');document.getElementById('v5-laboratoire')?.scrollIntoView({behavior:'smooth',block:'start'});}else if(a==='search'){navigate('nutri');document.getElementById('nutri-query')?.focus();}else if(a==='scan'){navigate('nutri');document.getElementById('nutri-scan-btn')?.click();}else if(a==='photo'){navigate('health');document.getElementById('ai-product-photo')?.scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('ai-product-photo')?.click();}}));
+document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{if(tab.dataset.tab==='home')summary();}));summary();document.addEventListener('visibilitychange',()=>{if(!document.hidden)summary();});
+})();

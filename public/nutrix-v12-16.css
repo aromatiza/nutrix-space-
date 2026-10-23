@@ -1,0 +1,10 @@
+/* V12.16 visual corrections: no duplicate calories in Santé; compact motivating score */
+#page-health .nx-legacy-health-calories{display:none!important}
+#page-home .nx-fitness-summary{align-items:start!important}
+#page-home .nx-fitness-summary .nx-fit-score{height:auto!important;min-height:270px!important;align-self:start!important;justify-content:flex-start!important;gap:14px!important}
+#page-home .nx-fitness-summary .nx-fit-score .nx-score-main{margin-top:6px!important}
+#page-home .nx-fitness-summary .nx-fit-score .nx-fit-line{margin-top:4px!important}
+#page-home .nx-fitness-summary .nx-fit-cal{min-height:0!important;height:auto!important}
+#page-home .nx-home-cal-visual{margin-top:0!important;margin-bottom:0!important;min-height:196px!important}
+#page-home .nx-home-macros{margin-top:6px!important}
+@media(max-width:700px){#page-home .nx-fitness-summary{grid-template-columns:1fr!important;gap:14px!important}#page-home .nx-fitness-summary .nx-fit-score{min-height:225px!important}#page-home .nx-home-macros{grid-template-columns:repeat(3,minmax(0,1fr))!important}#page-home .nx-home-macro{min-width:0!important;padding:11px 8px 17px!important}#page-home .nx-home-macro b{font-size:19px!important}#page-home .nx-home-macro span{font-size:11px!important}#page-home .nx-home-macro small{font-size:10px!important}}

@@ -1,0 +1,14 @@
+/* V13.1: final layer, safely scoped, without removing prior behavior. */
+#page-home .nx-fitness-summary .nx-fit-stat{min-height:0!important;height:auto!important}
+#page-home .nx-fit-score{justify-content:center!important;gap:14px!important}
+#page-home .nx-home-cal-visual{min-height:190px!important}
+#page-home .nx-home-macros{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#page-home .nx-home-macro{min-width:0}
+.nx-v131-ai-edit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.nx-v131-ai-edit p{grid-column:1/-1;margin:0;color:var(--muted,#52695e);font-size:13px}
+.nx-v131-ai-edit label{display:flex;flex-direction:column;gap:5px;min-width:0;font-size:12px}
+.nx-v131-ai-edit input{width:100%;box-sizing:border-box;min-width:0;border-radius:10px;border:1px solid var(--sep,#d9e6dd);background:var(--card,#fff);color:var(--text,#173b2c);padding:10px}
+.nx-v13-item{grid-template-columns:minmax(0,1fr) repeat(3,auto)}
+.nx-v13-item button:focus-visible,.nx-v131-ai-edit input:focus-visible{outline:3px solid var(--accent,#138866);outline-offset:2px}
+@media(max-width:660px){#page-home .nx-fitness-summary{grid-template-columns:1fr!important}#page-home .nx-home-macros{grid-template-columns:repeat(3,minmax(0,1fr))!important} .nx-v13-item{grid-template-columns:repeat(3,1fr)}.nx-v13-item>div{grid-column:1/-1}.nx-v13-item button{padding:7px 5px}}
+@media(max-width:380px){#page-home .nx-home-macro b{font-size:17px!important}.nx-v131-ai-edit{grid-template-columns:1fr}}

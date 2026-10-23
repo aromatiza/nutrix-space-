@@ -1,0 +1,27 @@
+/* V12.14 — clean dashboard, no duplicate calorie/score modules */
+#page-home .nx-fitness-summary{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;margin:16px 0 22px!important}
+#page-home .nx-fitness-summary .nx-fit-stat{display:flex!important;flex-direction:column!important;gap:12px!important;justify-content:flex-start!important;min-width:0!important;min-height:220px!important;padding:25px!important;border-radius:23px!important;box-sizing:border-box!important}
+#page-home .nx-fitness-summary strong{display:inline-flex!important;gap:2px!important;align-items:baseline!important;color:var(--text,#173b2c)!important;font-family:inherit!important;font-size:clamp(40px,5vw,64px)!important;font-weight:800!important;line-height:1.1!important;letter-spacing:-.055em!important;white-space:nowrap!important;opacity:1!important;width:auto!important;height:auto!important;min-width:0!important;background:none!important;border:0!important}
+#page-home .nx-fitness-summary strong small{font-size:16px!important;font-weight:600!important;letter-spacing:0!important}
+#page-home .nx-fitness-summary .nx-fit-line{height:10px!important;min-height:10px!important;flex:none!important}
+#page-home .nx-fitness-summary .nx-fit-line i{height:100%!important}
+#page-home .nx-fitness-summary .nx-fit-label{font-size:12px!important;letter-spacing:.085em!important}
+#page-home .nx-fitness-summary .nx-fit-foot{font-size:13px!important}
+#page-home .v10-dashboard{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+#page-home .v10-panel{min-width:0!important}
+#page-home .v10-scan-panel{min-height:240px!important}
+#page-home .v10-trend-panel,#page-home .v10-recent-panel{min-height:220px!important}
+#page-health>.block:has(>.card.hero),#page-health>.health-intro,#page-health>.block:has(> .card#score),#page-health>.block:has(> .card > .ring-wrap),#page-health .nx-legacy-score{display:none!important}
+#page-health .nx-health-macro-block{grid-column:1/-1!important;display:block!important}
+#page-health .nx-health-macros{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+#page-health .nx-health-macros .nx-fit-stat{min-height:150px!important;justify-content:center!important;padding:23px!important}
+#page-health .nx-health-macros strong{font-family:inherit!important;color:var(--text,#173b2c)!important;display:block!important;font-size:34px!important;line-height:1.2!important}
+#page-health #health-launchers:empty{display:none!important}
+#page-health .nx-fast-area{grid-column:1/-1!important}
+#page-health .nx-fast-card{max-width:100%!important}
+#page-health .nx-fast-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+#page-health .nx-fast-action{min-width:0!important}
+#page-health .nx-fast-result[hidden],#page-health .nx-fast-message:empty{display:none!important}
+@media(max-width:1050px){#page-home .v10-dashboard{grid-template-columns:1fr!important}}
+@media(max-width:620px){#page-home .nx-fitness-summary{gap:9px!important}#page-home .nx-fitness-summary .nx-fit-stat{min-height:183px!important;padding:15px 12px!important;gap:9px!important}#page-home .nx-fitness-summary strong{font-size:clamp(29px,7vw,40px)!important}#page-home .nx-fitness-summary strong small{font-size:11px!important}#page-home .nx-fitness-summary .nx-fit-label{font-size:10px!important;letter-spacing:0!important}#page-home .nx-fitness-summary .nx-fit-foot{font-size:10px!important}#page-health .nx-health-macros{grid-template-columns:1fr!important}#page-health .nx-health-macros .nx-fit-stat{min-height:115px!important}}
+@media(max-width:340px){#page-home .nx-fitness-summary{grid-template-columns:1fr!important}}

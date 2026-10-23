@@ -1,0 +1,12 @@
+(()=>{'use strict';
+const button=document.querySelector('.tab[data-tab="nutri"]');
+if(button)button.addEventListener('click',()=>{setTimeout(()=>{const scan=document.getElementById('nutri-scan-btn');if(scan&&!document.getElementById('nutri-scan-box')?.hidden)return;if(scan)scan.click();},120);},true);
+const dialog=document.getElementById('nx-postscan');let last='';const getLang=()=>document.getElementById('v111-language')?.value==='ary';
+const update=()=>{const ar=getLang();document.getElementById('nx-postscan-title').textContent=ar?'تسالا تحليل المنتوج':'Analyse terminée';document.getElementById('nx-postscan-info').textContent=ar?'شنو بغيتي تدير دابا؟':'Que souhaitez-vous faire ?';document.getElementById('nx-to-score').textContent=ar?'📊 شوف نقطة المنتوج':'📊 Voir le score';document.getElementById('nx-to-health').textContent=ar?'♡ زيد للصحة':'♡ Ajouter à Santé';document.getElementById('nx-postscan-close').textContent=ar?'سد':'Fermer';};
+function close(){dialog.hidden=true;}document.getElementById('nx-postscan-close')?.addEventListener('click',close);
+dialog?.addEventListener('click',e=>{if(e.target===dialog)close()});
+document.getElementById('nx-to-score')?.addEventListener('click',()=>{close();document.querySelector('.tab[data-tab="nutri"]')?.click();document.getElementById('nutri-feature')?.scrollIntoView({block:'start',behavior:'smooth'});});
+document.getElementById('nx-to-health')?.addEventListener('click',()=>{close();document.querySelector('.tab[data-tab="health"]')?.click();document.getElementById('custom-name')?.scrollIntoView({block:'center',behavior:'smooth'});});
+// Open options after a product has actually been identified and rendered; never fabricate successful scans.
+const feature=document.getElementById('nutri-feature');if(feature){new MutationObserver(()=>{const text=feature.textContent||'';const img=feature.querySelector('img');const sig=(img?.src||'')+'|'+text.slice(0,120);if(sig&&sig!==last&&!/Aucun produit sélectionné|Choisis un produit/i.test(text)&&feature.querySelector('.nutri-product|.nutri-product-head|.v8-product-overview,.nutri-feature-header,img')){last=sig;update();dialog.hidden=false;}}).observe(feature,{childList:true,subtree:true});}
+})();

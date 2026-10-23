@@ -1,0 +1,14 @@
+/* V12.12 FitnessPal-inspired daily calories + motivational score only on home */
+.nx-fitness-summary{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 19px}
+.nx-fit-stat{--metric:#20a47b;min-width:0;background:var(--glass,#fff);border:1px solid var(--sep,#e2ece6);border-radius:23px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(26,76,52,.06)}
+.nx-fit-score{--metric:#906be1;background:linear-gradient(125deg,rgba(148,116,231,.12),rgba(148,116,231,.035))}
+.nx-fit-cal{--metric:#1ba77e;background:linear-gradient(125deg,rgba(45,179,127,.10),rgba(45,179,127,.02))}
+.nx-fit-pro{--metric:#468dc9}.nx-fit-fat{--metric:#e29b4d}.nx-fit-carb{--metric:#9b74d5}
+.nx-fit-symbol{color:var(--metric);font-size:21px}.nx-fit-label{font-size:11px;letter-spacing:.11em;font-weight:800;color:var(--muted,#6e8077)}
+.nx-fit-stat strong{font-size:clamp(30px,4.4vw,48px);letter-spacing:-.06em;line-height:1.1;color:var(--text,#173b2c);font-variant-numeric:tabular-nums}.nx-fit-stat strong small{font-size:13px;letter-spacing:0;color:var(--muted,#6e8077)}
+.nx-fit-foot{font-size:12px;color:var(--muted,#637c70);line-height:1.4}.nx-fit-line{height:9px;background:var(--field,#e8efe9);border-radius:12px;overflow:hidden}.nx-fit-line i{display:block;background:var(--metric);width:0;height:100%;border-radius:12px;transition:width .3s}
+.nx-score-main{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.nx-target-chip{border:1px solid var(--sep,#dce7df);border-radius:50px;padding:6px 10px;font-size:11px;color:var(--muted,#637c70)}
+.nx-health-macros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.nx-health-macros .nx-fit-stat strong{font-size:32px}.nx-health-macros .nx-fit-line{height:7px}
+body.dark .nx-fit-score{background:linear-gradient(125deg,#30263e,#23282e)}body.dark .nx-fit-cal{background:linear-gradient(125deg,#21392f,#252c2b)}
+@media(max-width:650px){.nx-fitness-summary{gap:9px}.nx-fit-stat{border-radius:17px;padding:14px 11px;gap:8px}.nx-fit-stat strong{font-size:30px}.nx-fit-label{font-size:9px;letter-spacing:.04em}.nx-fit-foot{font-size:10px}.nx-target-chip{font-size:9px;padding:4px 7px}.nx-health-macros{grid-template-columns:1fr;gap:8px}.nx-health-macros .nx-fit-stat{padding:13px 15px}.nx-health-macros .nx-fit-stat strong{font-size:26px}}
+@media(max-width:350px){.nx-fitness-summary{grid-template-columns:1fr}}

@@ -1,0 +1,388 @@
+/* Nutrix Pulse HOME — faithful layout language of the uploaded PulseFit template, scoped for safety. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+:root{--pulse-accent:#2563eb;--pulse-accent2:#7c3aed;--pulse-nav-height:76px}
+body.pulse-shell{font-family:Inter,system-ui,sans-serif;padding-top:var(--pulse-nav-height)!important}
+body.pulse-shell .sidebar{display:none!important}
+body.pulse-shell .main{width:100%!important;max-width:none!important;margin:0!important;margin-left:0!important;padding:0 0 50px!important}
+body.pulse-shell .main>.top{max-width:1240px;margin:0 auto;padding:12px 24px!important;min-height:64px;border:0;background:transparent;box-shadow:none}
+body.pulse-shell .main>.date-nav{max-width:1192px;margin:8px auto 18px}
+body.pulse-shell .page{max-width:1200px;margin-inline:auto;padding:0 16px}
+body.pulse-shell #page-home{max-width:none;padding:0}
+body.pulse-shell #page-home>.v10-intro,body.pulse-shell #page-home>.nx-fitness-summary,body.pulse-shell #page-home>.nx-inline-ai,body.pulse-shell #page-home>.v10-dashboard,body.pulse-shell #page-home>.v10-footnote,body.pulse-shell #page-home>.nx-morocco{max-width:1180px;margin-left:auto;margin-right:auto}
+.pulse-navbar{height:var(--pulse-nav-height);position:fixed;inset:0 0 auto;z-index:1200;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(148,163,184,.24);box-shadow:0 3px 22px rgba(15,23,42,.04)}
+.pulse-nav-inner{width:min(100% - 48px,1180px);height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.pulse-navbar .pulse-logo{display:flex;align-items:center;gap:8px;font:800 1.55rem Poppins,Inter,sans-serif;color:#172033;border:0;background:none;cursor:pointer;padding:6px!important;letter-spacing:-.07em}
+.pulse-logo svg,.pulse-logo-accent{color:var(--pulse-accent)}
+.pulse-nav-links{display:flex;align-items:center;gap:clamp(10px,1.6vw,26px)}
+.pulse-nav-links .tab{display:inline-flex;align-items:center;position:relative;border:0;border-radius:0!important;padding:8px 1px!important;background:none!important;box-shadow:none!important;font:500 .91rem Inter,sans-serif;color:#64748b!important;white-space:nowrap;cursor:pointer}
+.pulse-nav-links .tab:hover,.pulse-nav-links .tab.active{color:#1e293b!important}
+.pulse-nav-links .tab:after{content:'';position:absolute;height:2px;bottom:0;left:0;width:0;background:var(--pulse-accent);transition:width .22s}
+.pulse-nav-links .tab:hover:after,.pulse-nav-links .tab.active:after{width:100%}
+.pulse-menu-btn{display:none;border:0;background:transparent;padding:10px;cursor:pointer}
+.pulse-menu-btn span{display:block;background:#1e293b;width:24px;height:2px;margin:5px;border-radius:3px}
+.pulse-home{width:100%;font-family:Inter,sans-serif}
+.pulse-hero{color:#fff;position:relative;min-height:min(780px,88vh);display:flex;align-items:center;background:#111d39 url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+.pulse-hero-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(8,12,28,.95),rgba(12,20,48,.77) 48%,rgba(37,99,235,.42))}
+.pulse-hero-inner{position:relative;z-index:1;width:min(100% - 48px,1180px);margin:auto;padding:75px 0 64px}
+.pulse-eyebrow{display:block;letter-spacing:.19em;font-weight:800;font-size:.77rem;color:#9ec2ff;text-transform:uppercase}
+.pulse-hero h2{font:800 clamp(2.8rem,6vw,5rem)/1.13 Poppins,Inter,sans-serif;letter-spacing:-.04em;color:white!important;margin:19px 0}
+.pulse-hero-sub{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:#d6e0f0;max-width:610px;margin-bottom:30px}
+.pulse-hero-cta,.pulse-welcome-actions{display:flex;flex-wrap:wrap;gap:14px}
+.pulse-home .pulse-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:13px 25px!important;border-radius:9px!important;font:700 .96rem Inter,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s;border:1px solid transparent}
+.pulse-home .pulse-btn:hover{transform:translateY(-2px)}
+.pulse-btn-primary{color:white!important;background:linear-gradient(135deg,#2563eb,#7c3aed)!important;box-shadow:0 12px 28px -12px rgba(37,99,235,.8)}
+.pulse-btn-outline{color:white!important;background:transparent!important;border-color:rgba(255,255,255,.55)!important}
+.pulse-btn-soft{color:#2563eb!important;background:#eff6ff!important;border-color:#bfdbfe!important}
+.pulse-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:55px;max-width:850px}
+.pulse-stat{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.23);backdrop-filter:blur(14px);border-radius:13px;padding:21px 14px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.pulse-stat strong{display:block;color:white;font:800 clamp(1.5rem,3vw,2.4rem) Poppins,sans-serif}
+.pulse-stat span{display:block;color:#d8e4f6;font-size:.81rem;line-height:1.5;margin-top:3px}
+.pulse-welcome{max-width:1180px;margin:0 auto!important;padding:75px 24px 35px;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
+.pulse-welcome h2{font:800 clamp(1.7rem,3vw,2.5rem) Poppins,sans-serif;letter-spacing:-.03em;margin:12px 0;color:var(--text,#172033)}
+.pulse-welcome p{color:var(--muted,#64748b);max-width:650px}
+.pulse-eyebrow-blue{color:#2563eb}
+body.pulse-shell .main>.top h1{font-size:1.1rem}
+body.pulse-shell .main>.top .sub{font-size:.78rem}
+body.pulse-shell #page-home>.v10-intro{padding:12px 16px}
+@media(max-width:900px){.pulse-nav-links{gap:12px}.pulse-nav-links .tab{font-size:.79rem}}
+@media(max-width:700px){:root{--pulse-nav-height:66px}.pulse-nav-inner{width:calc(100% - 30px)}.pulse-menu-btn{display:block}.pulse-nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:14px 22px 18px;box-shadow:0 18px 26px rgba(0,0,0,.13);background:var(--surface,#fff);flex-direction:column;align-items:stretch;gap:2px}.pulse-nav-links.open{display:flex}.pulse-nav-links .tab{padding:13px!important;font-size:1rem}.pulse-hero{min-height:640px}.pulse-hero-inner{width:calc(100% - 36px);padding:56px 0}.pulse-hero h2{font-size:clamp(2.5rem,10vw,3.6rem)}.pulse-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:35px}.pulse-stat{padding:17px 8px}.pulse-welcome{padding:48px 20px 25px}body.pulse-shell .main>.top{padding:10px 16px!important}body.pulse-shell .main>.date-nav{margin:4px 16px 12px}}
+@media(prefers-reduced-motion:reduce){.pulse-home *, .pulse-navbar *{transition:none!important;animation:none!important}}
+:root[data-theme="dark"] .pulse-navbar,body.dark .pulse-navbar{background:rgba(15,23,42,.95);border-color:#334155}
+:root[data-theme="dark"] .pulse-navbar .pulse-logo,body.dark .pulse-navbar .pulse-logo,:root[data-theme="dark"] .pulse-nav-links .tab,body.dark .pulse-nav-links .tab{color:#f1f5f9!important}
+:root[data-theme="dark"] .pulse-menu-btn span,body.dark .pulse-menu-btn span{background:white}
+
+/* Home focus: template layout, existing functional nodes remain mounted for data computation. */
+body.pulse-shell #page-home>.v10-intro,body.pulse-shell #page-home>.nx-fitness-summary,body.pulse-shell #page-home>.nx-inline-ai,body.pulse-shell #page-home>.v10-dashboard,body.pulse-shell #page-home>.v10-footnote,body.pulse-shell #page-home>.nx-morocco{position:absolute!important;left:-100000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;pointer-events:none!important;opacity:0!important}
+.pulse-hero{min-height:clamp(510px,69vh,710px);background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1800&q=85');background-position:center 51%}
+.pulse-hero-overlay{background:linear-gradient(105deg,rgba(6,19,37,.94) 0%,rgba(8,28,55,.82) 45%,rgba(10,32,45,.26) 100%)}
+.pulse-hero h2{max-width:920px;font-size:clamp(2.5rem,5.2vw,4.7rem)}
+.pulse-template-section{padding:clamp(55px,8vw,100px) 24px;background:var(--surface,#fff);color:var(--text,#182338)}
+.pulse-dietary{background:var(--bg,#f5f7fb)}
+.pulse-section-container{max-width:1180px;margin:0 auto}
+.pulse-section-head{text-align:center;max-width:740px;margin:0 auto 45px}
+.pulse-section-head h2{font:800 clamp(1.85rem,3.5vw,2.6rem)/1.2 Poppins,Inter,sans-serif;letter-spacing:-.035em;margin:12px 0;color:var(--text,#172033)}
+.pulse-section-head p:not(.pulse-eyebrow){color:var(--muted,#64748b);line-height:1.65}
+.pulse-template-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pulse-metric-card,.pulse-diet-card{background:var(--surface,#fff);border:1px solid var(--border,#e2e8f0);border-radius:16px;box-shadow:0 8px 24px rgba(15,23,42,.055);overflow:hidden}
+.pulse-metric-card{padding:34px 23px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pulse-metric-card h3,.pulse-diet-card h3{font:700 1.06rem Poppins,Inter,sans-serif;color:var(--text,#172033);margin:12px 0 7px}
+.pulse-metric-sub{font-size:.89rem;color:var(--muted,#64748b);line-height:1.6;margin:0}
+.pulse-ring{--pct:0;--clr:#2563eb;width:154px;height:154px;border-radius:50%;background:conic-gradient(var(--clr) calc(var(--pct)*1%),rgba(148,163,184,.18) 0);display:grid;place-items:center;position:relative;margin-bottom:8px}
+.pulse-ring:before{content:'';position:absolute;inset:15px;border-radius:50%;background:var(--surface,#fff)}
+.pulse-ring-val{z-index:1;position:relative;font:800 clamp(1.4rem,2.3vw,2rem) Poppins,Inter,sans-serif;max-width:110px;overflow-wrap:anywhere;color:var(--text,#172033)}
+.pulse-bar-grid{margin-top:24px}.pulse-bar-card{align-items:stretch;min-height:170px;text-align:left}.pulse-bar-card .pulse-btn{margin-top:15px}
+.pulse-progress-track{height:12px;border-radius:20px;overflow:hidden;background:rgba(148,163,184,.18);margin:16px 0}.pulse-progress-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--clr,#2563eb),#7c3aed);transition:width .4s ease;border-radius:20px}
+.pulse-diet-card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}.pulse-diet-body{padding:25px}.pulse-diet-body h3{margin:0 0 14px}.pulse-diet-body ul{padding:0 0 0 22px;margin:0 0 25px;line-height:2;color:var(--muted,#64748b)}.pulse-diet-body .pulse-btn{width:100%;font-size:.85rem}
+@media(max-width:850px){.pulse-template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:570px){.pulse-template-grid{grid-template-columns:1fr;gap:17px}.pulse-bar-grid{margin-top:17px}.pulse-template-section{padding:58px 18px}.pulse-hero{min-height:620px;background-position:63% center}.pulse-hero-cta{gap:8px}.pulse-hero-cta .pulse-btn{padding:12px 14px!important;min-height:46px;font-size:.82rem}.pulse-section-head{margin-bottom:28px}.pulse-ring{height:142px;width:142px}}
+
+/* Phase: replace legacy home title with the template presentation, without removing operational DOM. */
+body.pulse-shell:has(#page-home.active) .main>.top>div:first-child{display:none!important}
+body.pulse-shell:has(#page-home.active) .main>.top{min-height:0;justify-content:flex-end;padding-top:8px!important;padding-bottom:8px!important}
+body.pulse-shell:has(#page-home.active) .main>.date-nav{display:none!important}
+/* Native daily product discovery stays in the DOM and keeps its real async loader. */
+.pulse-articles{background:var(--pulse-page-bg,#f4f6fb)}
+.pulse-articles .nx-morocco{display:block!important;position:static!important;inset:auto!important;width:auto!important;height:auto!important;opacity:1!important;overflow:visible!important;pointer-events:auto!important;max-width:none!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.pulse-articles .nx-morocco-heading{display:none!important}
+.pulse-articles .nx-morocco-items{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.pulse-articles .nx-morocco-items>*{min-width:0;margin:0!important;border-radius:16px!important;overflow:hidden;background:var(--pulse-card-bg,#fff)!important;border:1px solid var(--pulse-card-border,#e2e8f0)!important;box-shadow:0 8px 24px rgba(15,23,42,.055)!important;color:var(--pulse-text,#172033)!important;transition:transform .2s,box-shadow .2s}
+.pulse-articles .nx-morocco-items>*:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(15,23,42,.12)!important}
+.pulse-articles .nx-morocco-items img{width:100%;object-fit:contain;max-height:220px}
+.pulse-articles .nx-morocco-items p,.pulse-articles .nx-morocco small{color:var(--pulse-muted,#64748b)}
+/* PulseFit dark palette across NUTRIX, including legacy pages; retain Nutrix's theme toggle. */
+body.pulse-shell{--pulse-page-bg:#f4f6fb;--pulse-card-bg:#fff;--pulse-card-border:#e2e8f0;--pulse-text:#182338;--pulse-muted:#64748b}
+body.pulse-shell.dark{--pulse-page-bg:#0b1120;--pulse-card-bg:#151e31;--pulse-card-border:#293750;--pulse-text:#eef3ff;--pulse-muted:#9dacbf;--bg:#0b1120!important;--surface:#151e31!important;--text:#eef3ff!important;--muted:#9dacbf!important;--border:#293750!important;background:#0b1120!important;color:#eef3ff}
+body.pulse-shell.dark .bg-img,body.pulse-shell.dark .bg-art{display:none!important}
+body.pulse-shell.dark .main,body.pulse-shell.dark .page{background:transparent!important}
+body.pulse-shell.dark .pulse-template-section{background:#151e31!important;color:#eef3ff!important}
+body.pulse-shell.dark .pulse-dietary,body.pulse-shell.dark .pulse-articles{background:#0b1120!important}
+body.pulse-shell.dark .pulse-metric-card,body.pulse-shell.dark .pulse-diet-card,body.pulse-shell.dark .pulse-articles .nx-morocco-items>*{background:#151e31!important;border-color:#293750!important}
+body.pulse-shell.dark .pulse-section-head h2,body.pulse-shell.dark .pulse-metric-card h3,body.pulse-shell.dark .pulse-diet-card h3,body.pulse-shell.dark .pulse-ring-val{color:#eef3ff!important}
+body.pulse-shell.dark .pulse-section-head p:not(.pulse-eyebrow),body.pulse-shell.dark .pulse-metric-sub,body.pulse-shell.dark .pulse-diet-body li{color:#a7b5ca!important}
+body.pulse-shell.dark .pulse-ring:before{background:#151e31!important}
+body.pulse-shell.dark .pulse-nav-links{background:#0f172a}
+body.pulse-shell.dark .pulse-nav-links .tab:hover,body.pulse-shell.dark .pulse-nav-links .tab.active{color:#b7caff!important}
+body.pulse-shell.dark :is(.card,.v10-panel,.block .card,.modal,.sheet,.settings-panel){background-color:#151e31;color:#eef3ff;border-color:#293750}
+@media(max-width:850px){.pulse-articles .nx-morocco-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.pulse-articles .nx-morocco-items{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.pulse-articles .nx-morocco-items>*{transition:none!important}}
+
+/* V4: compact icon rail and removal of duplicate, script-injected home hero. */
+:root{--pulse-nav-height:0px;--pulse-rail-width:68px}
+body.pulse-shell{padding-top:0!important;padding-left:var(--pulse-rail-width)!important}
+body.pulse-shell .pulse-navbar{top:0;right:auto;bottom:0;left:0;width:var(--pulse-rail-width);height:100dvh;border-right:1px solid var(--pulse-card-border,#e2e8f0);border-bottom:0;background:var(--pulse-card-bg,#fff);box-shadow:2px 0 18px rgba(15,23,42,.055);backdrop-filter:blur(16px)}
+body.pulse-shell .pulse-nav-inner{width:100%;height:100%;padding:14px 6px;flex-direction:column;justify-content:flex-start;gap:27px}
+body.pulse-shell .pulse-logo{font-size:0!important;display:flex;justify-content:center;align-items:center;min-height:44px;width:44px;padding:6px!important;border-radius:14px!important;background:linear-gradient(135deg,#2563eb,#7c3aed)!important;color:#fff!important}
+body.pulse-shell .pulse-logo svg{color:white;width:25px;height:25px}
+.pulse-logo-name{display:none!important}
+body.pulse-shell .pulse-nav-links{display:flex!important;position:static!important;flex-direction:column;align-items:center;gap:10px;width:100%;padding:0!important;box-shadow:none!important;background:transparent!important}
+body.pulse-shell .pulse-nav-links .tab{height:46px;width:46px;border-radius:13px!important;display:flex;justify-content:center;align-items:center;padding:10px!important;color:var(--pulse-muted,#64748b)!important}
+body.pulse-shell .pulse-nav-links .tab svg{display:block;flex-shrink:0}
+body.pulse-shell .pulse-nav-links .tab:hover,body.pulse-shell .pulse-nav-links .tab.active{background:rgba(37,99,235,.10)!important;color:#2563eb!important}
+body.pulse-shell .pulse-nav-links .tab:after{display:none!important}
+body.pulse-shell .pulse-nav-label{position:absolute;left:60px;padding:7px 11px;background:#172033;color:#fff;white-space:nowrap;font-size:12px;border-radius:7px;opacity:0;pointer-events:none;transform:translateX(-5px);transition:opacity .15s,transform .15s}
+body.pulse-shell .pulse-nav-links .tab:hover .pulse-nav-label,body.pulse-shell .pulse-nav-links .tab:focus-visible .pulse-nav-label{opacity:1;transform:translateX(0)}
+body.pulse-shell .pulse-menu-btn{display:none!important}
+/* This duplicate home feature was injected dynamically by the legacy atelier script. */
+body.pulse-shell #page-home>.nx-section-hero{display:none!important}
+/* Hero of the actual PulseFit template is the only main hero; more visual impact. */
+body.pulse-shell #page-home>.pulse-home>.pulse-hero{min-height:clamp(625px,83vh,890px)!important}
+body.pulse-shell #page-home>.pulse-home>.pulse-hero .pulse-hero-inner{padding:94px 0!important}
+/* Compact progress rings: save vertical space and avoid enormous cards. */
+body.pulse-shell .pulse-metrics{padding-block:45px!important}
+body.pulse-shell .pulse-metrics .pulse-section-head{margin-bottom:26px!important}
+body.pulse-shell .pulse-ring-grid{gap:16px;max-width:920px;margin-inline:auto}
+body.pulse-shell .pulse-ring-grid .pulse-metric-card{padding:18px 12px!important;min-height:0!important}
+body.pulse-shell .pulse-ring{width:100px!important;height:100px!important;margin-bottom:2px}
+body.pulse-shell .pulse-ring:before{inset:11px!important}
+body.pulse-shell .pulse-ring-val{font-size:1.25rem!important;max-width:76px}
+body.pulse-shell .pulse-ring-grid .pulse-metric-card h3{font-size:.91rem!important;margin:8px 0 3px}
+body.pulse-shell .pulse-metric-sub{font-size:.78rem}
+body.pulse-shell .pulse-bar-grid{gap:16px;margin-top:16px;max-width:920px;margin-inline:auto}
+body.pulse-shell .pulse-bar-grid .pulse-metric-card{min-height:125px!important;padding:18px!important}
+body.pulse-shell .main>.top{max-width:none!important;padding:5px 18px!important;min-height:52px!important}
+body.pulse-shell:has(#page-home.active) .main>.top{position:absolute;z-index:3;right:10px;top:8px;background:transparent!important;width:auto;min-height:0!important}
+body.pulse-shell:has(#page-home.active) .main>.top>div:first-child{display:none!important}
+body.pulse-shell.dark .pulse-navbar{background:#0f172a!important;border-color:#293750!important}
+body.pulse-shell.dark .pulse-nav-links .tab{color:#a7b5ca!important}
+body.pulse-shell.dark .pulse-nav-links .tab:is(:hover,.active){color:#b7caff!important;background:#223454!important}
+@media(max-width:700px){:root{--pulse-rail-width:0px;--pulse-nav-height:52px}body.pulse-shell{padding-left:0!important;padding-top:52px!important}body.pulse-shell .pulse-navbar{inset:0 0 auto 0;width:100%;height:52px;border-right:0;border-bottom:1px solid var(--pulse-card-border,#e2e8f0)}body.pulse-shell .pulse-nav-inner{width:100%;padding:4px 12px;flex-direction:row;justify-content:flex-start;gap:10px}body.pulse-shell .pulse-logo{height:37px;min-height:37px;width:37px;flex:0 0 37px}body.pulse-shell .pulse-nav-links{flex-direction:row!important;justify-content:space-between;flex:1;gap:0!important}body.pulse-shell .pulse-nav-links .tab{height:37px;width:37px;padding:7px!important}body.pulse-shell .pulse-nav-links .tab svg{width:19px;height:19px}body.pulse-shell .pulse-nav-label{display:none!important}body.pulse-shell:has(#page-home.active) .main>.top{top:54px;right:5px}body.pulse-shell #page-home>.pulse-home>.pulse-hero{min-height:690px!important}body.pulse-shell .pulse-ring-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}body.pulse-shell .pulse-ring-grid .pulse-metric-card{padding:14px 3px!important;border-radius:12px}body.pulse-shell .pulse-ring{width:72px!important;height:72px!important}body.pulse-shell .pulse-ring:before{inset:8px!important}body.pulse-shell .pulse-ring-val{font-size:.89rem!important;max-width:55px}body.pulse-shell .pulse-ring-grid .pulse-metric-card h3{font-size:.73rem!important}body.pulse-shell .pulse-metric-sub{font-size:.68rem!important}body.pulse-shell .pulse-bar-grid{grid-template-columns:1fr!important}}
+@media(max-width:370px){body.pulse-shell .pulse-nav-inner{padding-inline:4px;gap:3px}body.pulse-shell .pulse-nav-links .tab{width:34px}}
+
+
+/* V5: unify health page, top controls, and date bar with the PulseFit-inspired theme. */
+body.pulse-shell .main>.top{
+  background:transparent!important;
+}
+body.pulse-shell .top .actions{
+  gap:10px!important;
+  align-items:center;
+}
+body.pulse-shell .nx-language-switch{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:4px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(14,31,47,.92),rgba(22,53,65,.88));
+  border:1px solid rgba(116,154,171,.24);
+  box-shadow:0 10px 24px rgba(7,15,26,.14);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+body.pulse-shell .nx-lang-choice{
+  min-height:38px;
+  min-width:46px;
+  padding:8px 12px;
+  border-radius:14px;
+  font-size:.78rem;
+  font-weight:800;
+  color:#dbe8f7!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.pulse-shell .nx-lang-choice[aria-pressed="true"]{
+  background:rgba(255,255,255,.11)!important;
+  color:#ffffff!important;
+  border:1px solid rgba(255,255,255,.08);
+}
+body.pulse-shell .nx-lang-choice:hover{background:rgba(255,255,255,.08)!important}
+body.pulse-shell .nx-flag{display:none!important}
+body.pulse-shell .top .circle,
+body.pulse-shell .date-nav .circle{
+  width:42px;
+  height:42px;
+  border-radius:15px!important;
+  background:linear-gradient(135deg,rgba(14,31,47,.92),rgba(22,53,65,.88))!important;
+  border:1px solid rgba(116,154,171,.24)!important;
+  color:#e6f0ff!important;
+  box-shadow:0 10px 24px rgba(7,15,26,.14)!important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+body.pulse-shell .top .circle:hover,
+body.pulse-shell .date-nav .circle:hover,
+body.pulse-shell .top .circle:focus-visible,
+body.pulse-shell .date-nav .circle:focus-visible{
+  transform:translateY(-1px);
+  border-color:rgba(125,167,233,.45)!important;
+  color:#fff!important;
+}
+body.pulse-shell .top .circle .i,
+body.pulse-shell .date-nav .circle .i{
+  width:17px!important;
+  height:17px!important;
+  stroke-width:1.8;
+}
+body.pulse-shell .main>.date-nav{
+  padding:12px 16px!important;
+  background:linear-gradient(135deg,rgba(13,27,43,.95),rgba(20,49,58,.92))!important;
+  border:1px solid rgba(107,146,160,.22)!important;
+  border-radius:22px!important;
+  color:#f2f7ff!important;
+  box-shadow:0 18px 40px rgba(5,12,21,.12)!important;
+}
+body.pulse-shell .date-label{
+  color:#f6faff!important;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+body.pulse-shell .main>.top h1,
+body.pulse-shell .main>.top .sub{color:var(--pulse-text,#172033)!important}
+body.pulse-shell.dark .main>.top h1,
+body.pulse-shell.dark .main>.top .sub,
+body.pulse-shell.dark .date-label{color:#edf3ff!important}
+body.pulse-shell.dark .nx-language-switch,
+body.pulse-shell.dark .top .circle,
+body.pulse-shell.dark .date-nav .circle,
+body.pulse-shell.dark .main>.date-nav{
+  background:linear-gradient(135deg,rgba(9,18,33,.96),rgba(18,43,56,.92))!important;
+  border-color:rgba(94,132,150,.24)!important;
+}
+/* Health hero adopts the same smooth large gradient language as Home. */
+body.pulse-shell #page-health>.nx-section-hero{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.28fr) minmax(280px,.72fr);
+  align-items:center;
+  gap:clamp(22px,4vw,42px);
+  padding:clamp(28px,4vw,40px)!important;
+  margin:0 0 28px!important;
+  border-radius:34px!important;
+  background:linear-gradient(108deg,rgba(6,18,31,.96) 0%,rgba(9,31,42,.93) 46%,rgba(12,46,54,.88) 100%)!important;
+  border:1px solid rgba(95,130,144,.18)!important;
+  box-shadow:0 28px 70px rgba(4,11,21,.20)!important;
+  overflow:hidden;
+  position:relative;
+}
+body.pulse-shell #page-health>.nx-section-hero::before{
+  width:170px!important;height:170px!important;right:23%;top:14%;background:rgba(72,163,132,.11)!important;filter:none;
+}
+body.pulse-shell #page-health>.nx-section-hero::after{
+  width:110px!important;height:110px!important;left:8%;bottom:10%;background:rgba(91,126,220,.10)!important;filter:none;
+}
+body.pulse-shell #page-health .nx-hero-copy{position:relative;z-index:2;gap:16px!important}
+body.pulse-shell #page-health .nx-hero-kicker{
+  width:max-content;
+  background:rgba(255,255,255,.06)!important;
+  color:#dbeafe!important;
+  border:1px solid rgba(255,255,255,.1)!important;
+  box-shadow:none!important;
+}
+body.pulse-shell #page-health .nx-hero-title{
+  color:#ffffff!important;
+  font:800 clamp(2.55rem,5vw,4.35rem)/1.06 Poppins,Inter,sans-serif!important;
+  letter-spacing:-.05em!important;
+  max-width:11ch!important;
+  margin:0!important;
+}
+body.pulse-shell #page-health .nx-hero-title::after{
+  background:linear-gradient(90deg,#7dd3fc,#6ee7b7)!important;
+}
+body.pulse-shell #page-health .nx-hero-text{
+  color:#d4e3e8!important;
+  font-size:clamp(1rem,1.4vw,1.18rem)!important;
+  max-width:640px!important;
+}
+body.pulse-shell #page-health .nx-hero-points{gap:12px!important}
+body.pulse-shell #page-health .nx-hero-point{
+  background:rgba(255,255,255,.07)!important;
+  color:#f5fbff!important;
+  border:1px solid rgba(255,255,255,.11)!important;
+  padding:11px 15px!important;
+}
+body.pulse-shell #page-health .nx-hero-point i{background:#34d399!important}
+body.pulse-shell #page-health .nx-hero-media{
+  min-height:auto!important;
+  justify-content:flex-end!important;
+  align-self:stretch;
+}
+body.pulse-shell #page-health .nx-hero-orb{
+  opacity:.55;
+}
+body.pulse-shell #page-health .nx-hero-orb--one{width:84px!important;height:84px!important;right:17%;top:16%;background:rgba(80,175,143,.16)!important}
+body.pulse-shell #page-health .nx-hero-orb--two{width:42px!important;height:42px!important;left:8%;top:22%;background:rgba(91,126,220,.12)!important}
+body.pulse-shell #page-health .nx-hero-orb--three{width:58px!important;height:58px!important;left:18%;bottom:14%;background:rgba(109,192,161,.11)!important}
+body.pulse-shell #page-health .nx-hero-photo-shell{
+  width:min(100%,430px)!important;
+  padding:14px!important;
+  border-radius:30px!important;
+  background:rgba(255,255,255,.055)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:0 24px 50px rgba(0,0,0,.18)!important;
+  transform:none!important;
+}
+body.pulse-shell #page-health .nx-hero-photo{
+  width:100%!important;
+  max-height:335px!important;
+  aspect-ratio:4/3!important;
+  object-fit:cover!important;
+  object-position:center 52%!important;
+  border-radius:24px!important;
+  filter:saturate(.96) contrast(1.02) brightness(.94)!important;
+}
+body.pulse-shell #page-health .nx-hero-badge{
+  right:18px!important;
+  bottom:18px!important;
+  padding:13px 16px!important;
+  border-radius:19px!important;
+  background:rgba(8,17,28,.78)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  color:#f8fbff!important;
+}
+body.pulse-shell #page-health .nx-hero-badge span{color:#cadddf!important}
+/* Give health content the same surface language as the new hero. */
+body.pulse-shell #page-health .section-title{
+  color:var(--pulse-text,#182338)!important;
+  font-weight:800!important;
+  letter-spacing:-.02em;
+}
+body.pulse-shell #page-health .card,
+body.pulse-shell #page-health .health-guide,
+body.pulse-shell #page-health .health-launcher,
+body.pulse-shell #page-health .health-details,
+body.pulse-shell #page-health .health-launcher-icon{
+  border-color:rgba(148,163,184,.18)!important;
+}
+body.pulse-shell.dark #page-health .section-title{color:#eff4ff!important}
+body.pulse-shell.dark #page-health .card,
+body.pulse-shell.dark #page-health .health-guide,
+body.pulse-shell.dark #page-health .health-launcher,
+body.pulse-shell.dark #page-health .health-details,
+body.pulse-shell.dark #page-health .health-launcher-icon{
+  background:rgba(19,30,48,.9)!important;
+  border-color:rgba(82,103,133,.22)!important;
+}
+@media(max-width:980px){
+  body.pulse-shell #page-health>.nx-section-hero{grid-template-columns:1fr!important;padding:26px 22px!important}
+  body.pulse-shell #page-health .nx-hero-title{max-width:12ch!important;font-size:clamp(2.3rem,8vw,3.5rem)!important}
+  body.pulse-shell #page-health .nx-hero-media{justify-content:center!important}
+}
+@media(max-width:700px){
+  body.pulse-shell .top .actions{gap:6px!important}
+  body.pulse-shell .nx-language-switch{padding:3px;border-radius:15px}
+  body.pulse-shell .nx-lang-choice{min-height:34px;min-width:42px;padding:7px 10px;font-size:.73rem}
+  body.pulse-shell .top .circle,
+  body.pulse-shell .date-nav .circle{width:36px;height:36px;border-radius:13px!important}
+  body.pulse-shell .top .circle .i,
+  body.pulse-shell .date-nav .circle .i{width:15px!important;height:15px!important}
+  body.pulse-shell .main>.date-nav{padding:8px 10px!important;border-radius:17px!important}
+  body.pulse-shell #page-health>.nx-section-hero{padding:22px 16px!important;border-radius:24px!important}
+  body.pulse-shell #page-health .nx-hero-kicker{font-size:.68rem!important}
+  body.pulse-shell #page-health .nx-hero-point{padding:9px 12px!important;font-size:.82rem!important}
+  body.pulse-shell #page-health .nx-hero-photo-shell{width:min(100%,320px)!important;padding:10px!important;border-radius:22px!important}
+  body.pulse-shell #page-health .nx-hero-photo{max-height:255px!important;border-radius:16px!important}
+  body.pulse-shell #page-health .nx-hero-badge{right:12px!important;bottom:12px!important;padding:10px 12px!important;border-radius:14px!important}
+}
+
+
+/* V7.4: floating icon rail on the left instead of a heavy full bar; scanner hero removed. */
+body.pulse-shell{--pulse-rail-width:88px!important;padding-left:var(--pulse-rail-width)!important}
+body.pulse-shell .pulse-navbar{width:var(--pulse-rail-width)!important;background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important}
+body.pulse-shell .pulse-nav-inner{width:66px!important;height:calc(100dvh - 24px)!important;margin:12px auto!important;padding:14px 8px!important;border-radius:30px!important;border:1px solid rgba(148,163,184,.18)!important;background:rgba(255,255,255,.76)!important;box-shadow:0 16px 38px rgba(15,23,42,.08)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;justify-content:flex-start!important;gap:18px!important}
+body.pulse-shell.dark .pulse-nav-inner{background:rgba(15,23,42,.76)!important;border-color:rgba(71,85,105,.34)!important;box-shadow:0 18px 38px rgba(2,6,23,.34)!important}
+body.pulse-shell .pulse-nav-links{gap:12px!important}
+body.pulse-shell .pulse-nav-links .tab{position:relative!important;background:transparent!important;border-radius:15px!important}
+body.pulse-shell .pulse-nav-links .tab:hover,body.pulse-shell .pulse-nav-links .tab.active{background:rgba(37,99,235,.11)!important;box-shadow:0 8px 18px rgba(37,99,235,.12)!important}
+body.pulse-shell .pulse-nav-links .tab::before{content:'';position:absolute;left:-10px;top:50%;transform:translateY(-50%);width:4px;height:24px;border-radius:999px;background:transparent}
+body.pulse-shell .pulse-nav-links .tab.active::before{background:linear-gradient(180deg,#34d399,#2563eb)}
+body.pulse-shell #page-nutri>.nx-section-hero{display:none!important}
+@media(max-width:700px){body.pulse-shell{--pulse-rail-width:0px!important;padding-left:0!important;padding-top:64px!important}body.pulse-shell .pulse-navbar{inset:0 0 auto 0!important;width:100%!important;height:64px!important}body.pulse-shell .pulse-nav-inner{width:calc(100% - 18px)!important;height:50px!important;margin:7px auto!important;padding:6px 10px!important;border-radius:22px!important;flex-direction:row!important;align-items:center!important;gap:10px!important}body.pulse-shell .pulse-nav-links{flex-direction:row!important;justify-content:space-between!important;flex:1!important;gap:2px!important}body.pulse-shell .pulse-nav-links .tab{width:38px!important;height:38px!important}body.pulse-shell .pulse-nav-links .tab::before{display:none!important}}

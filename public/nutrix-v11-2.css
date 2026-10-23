@@ -1,0 +1,33 @@
+/* Nutrix 11.2 — visual consolidation, existing DOM and APIs retained */
+:root{--nx-brand:#126B52;--nx-brand-2:#228A67;--nx-background:#F5F8F6;--nx-surface:#FFFFFF;--nx-text:#17382B;--nx-muted:#637B70;--nx-border:#DFEAE3;--nx-glass:rgba(255,255,255,.92);--nx-shadow:0 5px 22px rgba(14,64,45,.07);--v111-glass:var(--nx-glass)!important}
+html{color-scheme:light;scroll-behavior:smooth}
+body{background:var(--nx-background);color:var(--nx-text)}
+.card,.v10-panel,.nutri-result-card,.v111-about article{background:var(--nx-surface)!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:1px solid var(--nx-border)!important;box-shadow:var(--nx-shadow)!important;border-radius:16px}
+.v111-about-bottom{background:var(--nx-surface)!important;background-image:none!important;border:1px solid var(--nx-border)!important;box-shadow:var(--nx-shadow)!important}
+.brand-name{letter-spacing:-.035em;font-weight:800}
+button,.btn,select,input,textarea{transition:background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #50B68E!important;outline-offset:3px}
+/* Compact FR/DR language control */
+.v111-language-label{display:inline-flex!important;align-items:center!important;margin:0!important;border:1px solid var(--nx-border)!important;background:var(--nx-surface)!important;border-radius:11px!important;box-shadow:none!important;padding:2px!important;max-width:132px;vertical-align:middle}
+.v111-language-label select{appearance:none!important;-webkit-appearance:none!important;min-width:67px!important;max-width:116px!important;font-weight:700!important;font-size:12px!important;letter-spacing:.01em!important;padding:7px 20px 7px 9px!important;background:transparent!important;color:var(--nx-text)!important;border:none!important;border-radius:9px!important;cursor:pointer!important;box-shadow:none!important}
+.v111-language-label::after{content:'⌄';color:var(--nx-muted);font-size:13px;margin-left:-17px;pointer-events:none}
+/* Nutri-Score A–E; emphasize the database grade only */
+.v111-grade-wrapper{background:var(--nx-surface)!important;border:1px solid var(--nx-border);border-radius:16px;padding:14px;margin:12px 0 17px}
+.v111-grade-title{color:var(--nx-text)!important;font-weight:850;letter-spacing:.045em}.v111-grade-title small,.v111-grade-missing{color:var(--nx-muted)!important}
+.v111-grade-scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;align-items:center;margin-top:10px}
+.v111-grade-segment{color:#fff!important;font-weight:900;opacity:.67;border-radius:0!important;min-width:0;box-shadow:none!important;text-shadow:none!important;transform:none!important;outline:none!important;line-height:1.12;padding:14px 0;font-size:clamp(19px,4vw,28px)}
+.v111-grade-segment:first-child{border-radius:13px 0 0 13px!important}.v111-grade-segment:last-child{border-radius:0 13px 13px 0!important}
+.v111-grade-segment.selected{opacity:1;transform:scale(1.11)!important;border-radius:15px!important;position:relative;z-index:2;box-shadow:0 5px 15px rgba(0,0,0,.15)!important;outline:3px solid var(--nx-surface)!important}
+/* Gemini stays discreet; small single-color icon */
+#v11-ai-launch{width:49px!important;height:49px!important;min-width:49px!important;min-height:49px!important;border-radius:16px!important;background:var(--nx-brand)!important;background-image:none!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 7px 22px rgba(10,68,44,.19)!important;right:16px!important}
+#v11-ai-launch svg{width:21px!important;height:21px!important;filter:none!important;fill:none!important;stroke:#fff!important;stroke-width:1.9!important}
+#v11-ai-drawer{background:var(--nx-surface)!important;color:var(--nx-text)!important}
+/* make dark mode coherent across all previous style layers */
+html[data-theme="dark"],html[data-mode="dark"],body[data-theme="dark"]{color-scheme:dark;--nx-brand:#BCE76D;--nx-brand-2:#92CE68;--nx-background:#10241D;--nx-surface:#1B3529;--nx-text:#EEF6ED;--nx-muted:#B5C7B9;--nx-border:#345143;--nx-glass:rgba(27,53,41,.94);--nx-shadow:0 6px 24px rgba(0,0,0,.15);--v111-glass:var(--nx-glass)!important}
+html[data-theme="dark"] body,html[data-mode="dark"] body,body[data-theme="dark"]{background:var(--nx-background)!important;color:var(--nx-text)!important}
+html[data-theme="dark"] #v11-ai-launch,html[data-mode="dark"] #v11-ai-launch{background:#BCE76D!important}html[data-theme="dark"] #v11-ai-launch svg,html[data-mode="dark"] #v11-ai-launch svg{stroke:#17382B!important}
+html[data-theme="dark"] .v111-grade-wrapper,html[data-mode="dark"] .v111-grade-wrapper{background:var(--nx-surface)!important}
+html[data-theme="dark"] .v111-grade-title,html[data-mode="dark"] .v111-grade-title{color:var(--nx-text)!important}
+@media(prefers-color-scheme:dark){html:not([data-theme="light"]):not([data-mode="light"]):not([data-theme="dark"]):not([data-mode="dark"]){color-scheme:dark;--nx-brand:#BCE76D;--nx-background:#10241D;--nx-surface:#1B3529;--nx-text:#EEF6ED;--nx-muted:#B5C7B9;--nx-border:#345143;--nx-glass:rgba(27,53,41,.94);--nx-shadow:0 6px 24px rgba(0,0,0,.15);--v111-glass:var(--nx-glass)!important}html:not([data-theme="light"]):not([data-mode="light"]):not([data-theme="dark"]):not([data-mode="dark"]) body{background:var(--nx-background)}}
+@media(max-width:640px){#v11-ai-launch{right:12px!important;bottom:calc(83px + env(safe-area-inset-bottom,0px))!important}.v111-language-label select{font-size:11px!important}.v111-grade-segment{padding:11px 0}}
+@media(prefers-reduced-motion:reduce){button,.btn,select,input,textarea{transition:none!important}}

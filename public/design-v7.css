@@ -1,0 +1,49 @@
+/* Space Daily V7 — design-only visual layer. Functional JS remains unchanged. */
+:root{--accent:#138466;--bg:#f5f8f6;--text:#18382f;--muted:#70837c;--glass:#ffffff;--glass-strong:#fff;--glass-border:#dce9e3;--field:#f1f7f4;--sep:#e0ece6;--shadow:0 12px 38px rgba(24,66,48,.065);--v7-ink:#173e35;--v7-glow:#bbf0d5}
+body.dark{--accent:#63dbad;--bg:#0c1715;--text:#e8f6ef;--muted:#9eb7aa;--glass:#172621;--glass-strong:#1a2c26;--glass-border:#31483c;--field:#1b3129;--sep:#31473c;--shadow:0 15px 38px rgba(0,0,0,.22);--v7-ink:#0c1715;--v7-glow:#275842}
+html{scroll-behavior:smooth}
+body{background:var(--bg);font-family:Inter,Manrope,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.bg-art{background:radial-gradient(ellipse 55% 34% at 86% 2%,rgba(107,206,151,.10),transparent 78%),var(--bg)}
+.bg-img{opacity:.035!important}
+.sidebar{background:var(--glass);border-right:1px solid var(--sep);box-shadow:0 12px 40px rgba(29,70,51,.035)}
+.brand{padding:4px 7px 24px;border-bottom:1px solid var(--sep)}
+.brand .logo{filter:drop-shadow(0 7px 12px rgba(20,130,94,.16))}
+.brand-name{font-weight:850!important;letter-spacing:-.055em!important}
+.brand-sub{letter-spacing:.02em;color:var(--muted)!important;font-size:11px!important}
+.nav{gap:8px}
+.nav .tab{border:1px solid transparent;border-radius:15px;min-height:47px;font-weight:650;transition:background .18s,color .18s,transform .18s,border .18s}
+.nav .tab:hover{background:var(--field);transform:translateX(2px)}
+.nav .tab.active{border-color:color-mix(in srgb,var(--accent) 18%,var(--sep));background:color-mix(in srgb,var(--accent) 11%,var(--glass));color:var(--accent);box-shadow:inset 3px 0 var(--accent)}
+.main{max-width:1780px}.top{border-bottom:1px solid var(--sep);padding-bottom:22px;margin-bottom:24px}
+.top h1{font-weight:850;letter-spacing:-.055em;font-size:clamp(27px,3vw,39px)}
+.top .sub{color:var(--muted)}
+.actions .circle,.date-nav .circle{background:var(--glass);border:1px solid var(--sep);box-shadow:0 3px 10px rgba(20,65,45,.035)}
+.date-nav{background:var(--glass);border:1px solid var(--sep);border-radius:18px;padding:7px 10px;box-shadow:0 6px 20px rgba(17,55,38,.035)}
+.card{background:var(--glass);border-radius:23px;border:1px solid var(--sep);box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.card:hover{border-color:color-mix(in srgb,var(--accent) 22%,var(--sep));box-shadow:0 17px 42px rgba(22,68,47,.095)}
+.hero,#page-nutri .nutri-hero{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(114deg,#103a30 0%,#16634c 55%,#218868 100%);color:#fff;border:1px solid rgba(255,255,255,.1);box-shadow:0 22px 48px rgba(15,96,70,.2);padding:28px 32px;min-height:175px}
+.hero:before,#page-nutri .nutri-hero:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;top:-145px;right:9%;background:radial-gradient(circle,rgba(180,255,208,.26),rgba(180,255,208,0) 69%);pointer-events:none;z-index:-1}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(225,255,232,.12);border-radius:50%;right:-112px;bottom:-182px;box-shadow:0 0 0 38px rgba(222,255,225,.035),0 0 0 76px rgba(222,255,225,.025);pointer-events:none}
+.hero-greet{font-weight:850;letter-spacing:-.035em;font-size:clamp(23px,2.3vw,31px)}
+.hero .hero-text{color:#d9f3e7!important;line-height:1.65;max-width:630px}
+.health-guide{background:linear-gradient(110deg,var(--field),var(--glass));border:1px solid var(--sep);border-radius:20px;padding:20px 24px}
+.health-guide strong{font-weight:800;letter-spacing:-.025em}
+.health-launcher{border-radius:20px;box-shadow:var(--shadow)}
+.health-launcher-icon{background:color-mix(in srgb,var(--accent) 11%,var(--glass));border:1px solid color-mix(in srgb,var(--accent) 16%,var(--sep));border-radius:15px}
+.health-launcher-copy strong{font-weight:800}
+.btn{border-radius:13px;font-weight:750;box-shadow:0 7px 15px rgba(19,132,102,.13)}
+.btn.ghost{box-shadow:none}
+input,select,textarea{accent-color:var(--accent)}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 43%,transparent);outline-offset:3px}
+.nutri-score-big,.nutri-score-badge{box-shadow:0 9px 25px rgba(20,76,54,.10)}
+.nutri-result-card,.nutri-feature-wrap,.nutri-compare-wrap{border-radius:21px}
+.nutri-search-card,.nutri-scan-card{border-radius:20px}
+.ai-heading,.ai-chat,.ai-compose,.pro-ai-panel{border-radius:20px}
+.ai-message{line-height:1.65}
+.v5-lab-grid article{background:linear-gradient(145deg,var(--field),var(--glass));border-radius:19px;padding:20px}
+.v5-lab-grid article h4{letter-spacing:-.02em}
+.company-dialog{border:1px solid var(--sep);box-shadow:0 32px 95px rgba(5,39,27,.24)}
+@media(min-width:900px){.main{padding-top:34px}.sidebar{padding-top:34px}}
+@media(max-width:899px){.sidebar{background:color-mix(in srgb,var(--glass) 95%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 13px 35px rgba(14,66,47,.14);border-radius:19px}.brand{border-bottom:0}.main{padding-top:19px}.top{padding-bottom:16px}.nav{gap:2px}.nav .tab{min-height:47px;border-radius:13px}.nav .tab:hover{transform:none}.nav .tab.active{box-shadow:inset 0 -3px var(--accent)}.hero,#page-nutri .nutri-hero{padding:23px 20px;min-height:152px}.health-guide{padding:16px 18px}}
+@media(max-width:540px){.main{padding-left:13px;padding-right:13px}.top h1{font-size:29px}.card{border-radius:18px;padding:17px}.hero:after{right:-170px}.date-nav{padding:6px}.health-launcher{padding:15px}.v5-lab-grid article{padding:17px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}

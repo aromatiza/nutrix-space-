@@ -1,0 +1,36 @@
+/* Nutrix 11.3 — contrast, coherent light/dark palette, and accessible language control.
+   Loaded LAST to correct conflicting historical theme layers, no data/business logic changes. */
+:root{--nx113-bg:#F6F8F5;--nx113-card:#FFFFFF;--nx113-ink:#163126;--nx113-muted:#52685D;--nx113-border:#DAE6DE;--nx113-accent:#1F6B4F;--nx113-soft:#E7F3EB;--nx113-line:#DBE7DE;--nx113-ring:#52AD7D}
+body:not(.dark){--bg:var(--nx113-bg)!important;--glass:var(--nx113-card)!important;--glass-strong:var(--nx113-card)!important;--field:var(--nx113-soft)!important;--sep:var(--nx113-border)!important;--text:var(--nx113-ink)!important;--muted:var(--nx113-muted)!important;--accent:var(--nx113-accent)!important;--v10-bg:var(--nx113-bg)!important;--v10-ink:var(--nx113-ink)!important;--v10-green:var(--nx113-accent)!important;--v10-border:var(--nx113-border)!important;--v11-bg:var(--nx113-bg)!important;--v11-panel:var(--nx113-card)!important;--v11-ink:var(--nx113-ink)!important;--v11-highlight:var(--nx113-accent)!important;--v11-muted:var(--nx113-muted)!important;--v11-outline:var(--nx113-border)!important;--nx-surface:var(--nx113-card)!important;--nx-text:var(--nx113-ink)!important;--nx-muted:var(--nx113-muted)!important;--nx-background:var(--nx113-bg)!important;--nx-border:var(--nx113-border)!important}
+body.dark{--bg:#0E1F18!important;--glass:#183126!important;--glass-strong:#1B362A!important;--field:#233E30!important;--sep:#355545!important;--text:#F4F7F2!important;--muted:#C0CFC5!important;--accent:#A6E85A!important;--v10-bg:#0E1F18!important;--v10-ink:#F4F7F2!important;--v10-green:#A6E85A!important;--v10-border:#355545!important;--v11-bg:#0E1F18!important;--v11-panel:#183126!important;--v11-ink:#F4F7F2!important;--v11-highlight:#A6E85A!important;--v11-muted:#C0CFC5!important;--v11-outline:#355545!important;--nx-background:#0E1F18!important;--nx-surface:#183126!important;--nx-text:#F4F7F2!important;--nx-muted:#C0CFC5!important;--nx-border:#355545!important;--nx-brand:#A6E85A!important;--nx-glass:rgba(24,49,38,.96)!important}
+body{background:var(--v11-bg)!important;color:var(--v11-ink)!important}
+/* Make page titles visible instead of washed out by legacy white-on-light rules */
+body:not(.dark) .top h1,body:not(.dark) #page-title,body:not(.dark) #page-home .v10-intro h1,body:not(.dark) #page-home .v10-intro h2,body:not(.dark) #page-home .v10-intro strong,body:not(.dark) .v10-intro,body:not(.dark) .section-title,body:not(.dark) .v10-eyebrow{color:var(--nx113-ink)!important;opacity:1!important;text-shadow:none!important}
+body:not(.dark) .top .sub,body:not(.dark) #page-sub,body:not(.dark) .v10-intro p,body:not(.dark) .v10-intro small,body:not(.dark) .v10-intro .v10-eyebrow{color:var(--nx113-muted)!important;opacity:1!important}
+body.dark .top h1,body.dark #page-title,body.dark #page-home .v10-intro h1,body.dark #page-home .v10-intro h2,body.dark .v10-intro,body.dark .section-title{color:#F4F7F2!important;opacity:1!important}
+body.dark .top .sub,body.dark #page-sub,body.dark .v10-intro p,body.dark .v10-intro small{color:#C0CFC5!important;opacity:1!important}
+/* Light surfaces should truly be light; dark sidebar remains visually distinct */
+body:not(.dark) .v10-panel,body:not(.dark) .v10-primary-panel,body:not(.dark) .v10-scan-panel,body:not(.dark) .v10-recent-panel,body:not(.dark) .v10-trend-panel,body:not(.dark) .card,body:not(.dark) .v10-scan-choice,body:not(.dark) .v11-shortcuts button{background:#FFF!important;background-image:none!important;color:#163126!important;border-color:#DAE6DE!important;box-shadow:0 5px 18px rgba(18,62,39,.055)!important}
+body.dark .v10-panel,body.dark .card,body.dark .v10-scan-choice,body.dark .v11-shortcuts button{background:#183126!important;background-image:none!important;color:#F4F7F2!important;border-color:#355545!important}
+body:not(.dark) .v10-panel h2,body:not(.dark) .v10-panel h3,body:not(.dark) .v10-scan-choice strong,body:not(.dark) .v11-shortcuts button,body:not(.dark) .v10-metric-value{color:#163126!important;opacity:1!important}
+body.dark .v10-panel h2,body.dark .v10-panel h3,body.dark .v10-scan-choice strong,body.dark .v11-shortcuts button{color:#F4F7F2!important;opacity:1!important}
+body:not(.dark) .v10-choice-icon{background:#E7F3EB!important;color:#1F6B4F!important}body:not(.dark) .v10-choice-icon svg{stroke:#1F6B4F!important}
+body.dark .v10-choice-icon{background:#284937!important}body.dark .v10-choice-icon svg{stroke:#A6E85A!important}
+body:not(.dark) .v10-ring{background:conic-gradient(#318E66 calc(var(--p)*1%),#E3EEE6 calc(var(--p)*1%) 100%)!important}
+body.dark .v10-ring{background:conic-gradient(#A6E85A calc(var(--p)*1%),#365844 calc(var(--p)*1%) 100%)!important}
+/* Professional, compact language picker, preserving underlying localization select */
+.nx-language-switch{display:inline-flex;align-items:center;gap:3px;flex-shrink:0;background:#E9F0EB;border:1px solid #D8E5DC;border-radius:13px;padding:4px;isolation:isolate}
+.nx-lang-choice{display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;min-height:36px;padding:7px 10px;border:0;border-radius:9px;background:transparent!important;color:#52685D!important;font-size:12px;font-weight:750;line-height:1.1;cursor:pointer;box-shadow:none!important}
+.nx-lang-choice[aria-pressed="true"]{background:#FFFFFF!important;color:#164A34!important;box-shadow:0 1px 6px rgba(11,47,30,.12)!important}
+.nx-flag{font-size:16px;line-height:1;display:inline-block}
+.nx-native-language{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;opacity:0!important;pointer-events:none!important}
+body.dark .nx-language-switch{background:#233E30;border-color:#3B5A46}body.dark .nx-lang-choice{color:#C0CFC5!important}body.dark .nx-lang-choice[aria-pressed="true"]{background:#3B5C46!important;color:#F4F7F2!important;box-shadow:none!important}
+.nx-lang-choice:focus-visible{outline:2px solid #258860!important;outline-offset:2px}
+body.dark .nx-lang-choice:focus-visible{outline-color:#A6E85A!important}
+/* Keep header controls visible and separated at narrow widths */
+.top .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+body:not(.dark) .top .circle{background:#FFF!important;color:#1F6B4F!important;border:1px solid #D8E5DC!important}
+body.dark .top .circle{background:#234031!important;color:#D6EAD8!important;border:1px solid #3B5A46!important}
+[lang="ary"] body{font-family:Inter,"Noto Sans Arabic",Tahoma,Arial,sans-serif}
+@media(max-width:620px){.nx-language-switch{gap:2px;padding:3px}.nx-lang-choice{min-height:34px;padding:6px 7px;font-size:11px}.nx-flag{font-size:14px}.top .actions{gap:6px}.top h1{font-size:clamp(21px,5vw,29px)!important}}
+@media(prefers-reduced-motion:reduce){.nx-lang-choice{transition:none!important}}

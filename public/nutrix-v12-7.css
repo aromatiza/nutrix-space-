@@ -1,0 +1,144 @@
+/* Nutrix Pro V12.7 — continuous call mode + refined dark mode */
+/* AI suggestions arranged nicely */
+#v11-ai-body .ai-label{margin:2px 0 0!important;font-size:13px!important;letter-spacing:.16em!important;text-transform:uppercase;color:#70877c!important}
+#v11-ai-body .ai-suggestions{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:10px!important;
+}
+#v11-ai-body .ai-chip{
+  min-height:56px!important;
+  display:flex!important;align-items:center;justify-content:flex-start!important;
+  padding:12px 14px!important;
+  border-radius:18px!important;
+  font-weight:700!important;
+  border:1px solid rgba(23,62,47,.08)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(246,250,247,.94))!important;
+  color:#18392c!important;
+  box-shadow:0 10px 22px rgba(18,42,33,.04)!important;
+}
+#v11-ai-body .ai-chip:last-child{grid-column:1 / -1!important}
+#v11-ai-body .ai-chip:hover{transform:translateY(-2px)!important;border-color:#d5e7dc!important}
+
+/* cleaner action buttons: no icons */
+.nx-ai-dock{display:grid!important;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:2px}
+.nx-ai-meta{min-height:0!important}
+.nx-ai-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.nx-ai-action-btn{
+  appearance:none;border:1px solid rgba(24,57,44,.10);background:rgba(255,255,255,.88);
+  color:#173b2d;font-weight:700;font-size:13px;line-height:1;
+  padding:13px 14px;border-radius:15px;cursor:pointer;
+  transition:transform .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+  box-shadow:0 8px 18px rgba(16,38,29,.05);
+}
+.nx-ai-action-btn:hover{transform:translateY(-2px);border-color:#d8e8de}
+.nx-ai-action-btn.is-active{background:#1d6b51;color:#fff;border-color:#1d6b51;box-shadow:0 12px 24px rgba(29,107,81,.18)}
+#ai-voice-btn{min-width:104px}
+#ai-call-btn{margin-left:auto}
+.nx-ai-attach-pill{
+  display:inline-flex!important;align-items:center;gap:8px;
+  padding:10px 12px;border-radius:999px;background:rgba(248,251,249,.96);
+  border:1px solid rgba(24,57,44,.08);color:#244438;font-size:12px;font-weight:700;
+}
+.nx-ai-attach-pill button{border:0;background:transparent;color:inherit;cursor:pointer;font-size:16px;line-height:1}
+
+/* chat/composer polish */
+#v11-ai-body .ai-chat{scrollbar-width:thin;scrollbar-color:rgba(29,107,81,.35) transparent}
+#v11-ai-body .ai-chat::-webkit-scrollbar{width:8px}
+#v11-ai-body .ai-chat::-webkit-scrollbar-thumb{background:rgba(29,107,81,.26);border-radius:999px}
+#v11-ai-body .ai-compose{grid-template-columns:auto 1fr auto!important}
+#v11-ai-body .ai-compose input{font-size:14px!important;padding-inline:14px!important}
+#v11-ai-body .ai-compose button[type='submit']{
+  background:linear-gradient(135deg,#1d6b51,#2b8a6e)!important;color:#fff!important;border:0!important;
+}
+
+/* More Siri-like call mode */
+body.ai-call-active #v11-ai-body .ai-overview,
+body.ai-call-active #v11-ai-body .ai-label,
+body.ai-call-active #v11-ai-body .ai-suggestions,
+body.ai-call-active #v11-ai-body .ai-disclaimer{display:none!important}
+body.ai-call-active #v11-ai-body .ai-shell{gap:16px!important}
+body.ai-call-active #v11-ai-body .ai-heading p{font-size:16px!important;max-width:48ch!important;margin-inline:auto!important}
+body.ai-call-active #v11-ai-body .ai-chat{
+  min-height:260px!important;max-height:310px!important;
+  border-radius:26px!important;
+  background:rgba(255,255,255,.10)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)!important;
+}
+body.ai-call-active #v11-ai-body .ai-message.assistant .ai-bubble,
+body.ai-call-active #v11-ai-body .ai-message.user .ai-bubble{
+  border:1px solid rgba(255,255,255,.12)!important;
+}
+body.ai-call-active .nx-ai-dock{gap:12px!important}
+body.ai-call-active .nx-ai-actions{justify-content:center!important;gap:10px!important}
+body.ai-call-active .nx-ai-action-btn{
+  background:rgba(255,255,255,.14)!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important;box-shadow:none!important;
+}
+body.ai-call-active .nx-ai-action-btn.is-active{background:#fff!important;color:#143427!important;border-color:#fff!important}
+body.ai-call-active #v11-ai-body .ai-compose{background:rgba(255,255,255,.14)!important;border-color:rgba(255,255,255,.18)!important}
+body.ai-call-active #v11-ai-body .ai-compose input{background:rgba(255,255,255,.16)!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}
+body.ai-call-active .nx-ai-attach-pill{background:rgba(255,255,255,.12)!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}
+body.ai-call-active #v11-ai-body .ai-bottom{justify-content:center!important}
+body.ai-call-active #v11-ai-body .ai-bottom button{display:none!important}
+body.ai-call-active #v11-ai-body .ai-bottom span{font-size:13px!important;opacity:.92}
+
+/* Better general dark mode */
+body.dark{
+  --panel:rgba(24,33,28,.94);
+  --panel-soft:rgba(29,41,34,.86);
+  --line:rgba(141,199,169,.14);
+  --txt:#edf6f0;
+  --muted:#afc1b6;
+  --accent-soft:rgba(141,199,169,.16);
+}
+body.dark .section-title::before{background:linear-gradient(135deg,#8ed1a8,#d9c178)}
+body.dark .section-title::after,
+body.dark .nutri-card-head h3::after,
+body.dark .v111-about h2::after,
+body.dark .ai-heading h2::after,
+body.dark .nx-hero-title::after{background:linear-gradient(90deg,#8ed1a8,#d9c178)}
+body.dark .ai-heading .ai-eyebrow,body.dark .v111-eyebrow,body.dark .section-title + .muted{color:#adc2b7!important}
+body.dark #v11-ai-drawer{background:linear-gradient(180deg,rgba(19,28,23,.94),rgba(17,24,20,.96))!important;border-color:var(--line)!important}
+body.dark .v11-ai-top,
+body.dark #v11-ai-body .ai-disclaimer,
+body.dark #v11-ai-body .ai-chat,
+body.dark #v11-ai-body .ai-compose,
+body.dark .nx-ai-action-btn,
+body.dark .nx-ai-attach-pill,
+body.dark #v11-ai-close,
+body.dark #v11-ai-body .ai-chip{
+  background:var(--panel-soft)!important;
+  border-color:var(--line)!important;
+  color:var(--txt)!important;
+}
+body.dark #v11-ai-body .ai-heading p,
+body.dark #v11-ai-body .ai-bottom span,
+body.dark #v11-ai-body .ai-disclaimer,
+body.dark .v11-ai-top small,
+body.dark .ai-stat-caption,
+body.dark .muted{color:var(--muted)!important}
+body.dark #v11-ai-body .ai-compose input,
+body.dark input,
+body.dark textarea,
+body.dark select{background:#223128!important;color:var(--txt)!important;border-color:#31453a!important}
+body.dark #v11-ai-body .ai-compose input::placeholder{color:#a8bbb0!important}
+body.dark #v11-ai-body .ai-chip{box-shadow:none!important}
+body.dark .nx-ai-action-btn.is-active{background:#7fc89d!important;color:#10261d!important;border-color:#7fc89d!important}
+body.dark #v11-ai-body .ai-message.assistant .ai-bubble{background:#24342c!important;color:var(--txt)!important;border-color:#31453a!important}
+body.dark #v11-ai-body .ai-message.user .ai-bubble{background:#2d6a52!important;color:#fff!important;border-color:#2d6a52!important}
+body.dark .ai-stat{background:#223128!important;border-color:#31453a!important}
+body.dark .nx-hero-photo{filter:brightness(.92) contrast(1.05)}
+body.dark .nx-hero-photo-shell{background:rgba(30,44,36,.92)!important;border-color:rgba(141,199,169,.12)!important}
+body.dark .nx-hero-badge,
+body.dark .nx-hero-kicker,
+body.dark .nx-hero-point{background:rgba(29,42,35,.88)!important;border-color:rgba(141,199,169,.12)!important;color:#edf6f0!important}
+body.dark .nx-hero-text{color:#b3c6bb!important}
+body.dark .v10-panel,body.dark .card,body.dark .explore-panel,body.dark .nutri-results-card,body.dark .v111-about{box-shadow:none!important}
+
+@media(max-width:760px){
+  #v11-ai-body .ai-suggestions{grid-template-columns:1fr!important}
+  .nx-ai-actions{justify-content:flex-start}
+  #ai-call-btn{margin-left:0}
+  .nx-ai-action-btn{flex:1 1 calc(50% - 8px);text-align:center}
+  body.ai-call-active #v11-ai-body .ai-chat{min-height:220px!important;max-height:250px!important}
+}

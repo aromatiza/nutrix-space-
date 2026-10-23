@@ -1,0 +1,13 @@
+{
+  "name": "nutrix-pro",
+  "version": "13.3.0",
+  "private": true,
+  "description": "Nutrix Pro V13 Premium, progressive enhancement of V12.16",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

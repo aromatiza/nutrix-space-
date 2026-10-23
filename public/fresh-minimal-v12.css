@@ -1,0 +1,55 @@
+/* Nutrix Pro V12 • Fresh Minimal B — visual-only layer.
+   Existing markup, IDs, event handlers and app features remain intact. */
+:root{
+ --accent:#26876c!important;--bg:#f7faf8!important;--text:#23372f!important;
+ --muted:#71837a!important;--glass:#ffffff!important;--glass-strong:#ffffff!important;
+ --glass-border:#e8efeb!important;--sep:#e9efeb!important;--field:#f4f8f5!important;
+ --shadow:0 2px 14px rgba(27,71,48,.035)!important;
+ --v11-outline:#e8efeb!important;
+}
+body{background:#f7faf8!important;color:var(--text);letter-spacing:-.008em}
+.bg-art{background:#f7faf8!important}
+.bg-img:not(.on){display:none}
+.sidebar{background:#fff!important;border:1px solid #edf1ed!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-radius:22px!important}
+.brand{padding:5px 8px 18px}.brand-name{font-size:20px;letter-spacing:-.045em}.brand-sub{color:#92a49a}
+.sidebar .tab{border-radius:13px!important;color:#72857a;transition:background .15s ease,color .15s ease}
+.sidebar .tab:hover{background:#f4f8f5;color:#275a45}
+.sidebar .tab.active{background:#eaf6ee!important;color:#216b51!important;box-shadow:none!important;font-weight:650}
+.main{max-width:1540px;margin-right:auto}.top{margin-bottom:20px!important}.top h1{font-size:clamp(23px,3vw,30px)!important;letter-spacing:-.045em!important;font-weight:720}.top .sub{font-size:13px!important;color:#84968c!important}
+.circle{background:#fff!important;border:1px solid #e7eee8!important;box-shadow:none!important;backdrop-filter:none!important}
+.card,.v10-panel,.nx-morocco,.nx-compare-product,.nx-morocco-card{background:#fff!important;border:1px solid #e7eee9!important;box-shadow:0 2px 14px rgba(35,65,48,.032)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:20px!important}
+.v10-primary-panel{background:linear-gradient(155deg,#fff 66%,#f5faf6 100%)!important}
+.v10-intro{margin-bottom:20px!important}.v10-intro h2{letter-spacing:-.04em}.v10-intro p{color:#87988f!important}
+.v10-eyebrow,.v10-kicker,.nx-kicker{color:#448d73!important;letter-spacing:.1em}
+.v10-pill,.streak{background:#edf7f0!important;color:#3c795c!important;border:1px solid #e3f1e7!important;box-shadow:none!important}
+.v10-ring{filter:saturate(.72)}.v10-choice-icon{background:#eef7f0!important;color:#267858!important}
+.v10-scan-choice,.v11-shortcuts button{border:1px solid #e9efea!important;box-shadow:none!important;border-radius:16px!important}
+.v10-scan-choice:hover,.v11-shortcuts button:hover{background:#f4faf6!important}
+.section-title{letter-spacing:.055em!important;font-size:11px!important;color:#87998f!important}
+input,textarea,select{background:#f9fbf9!important;border:1px solid #e4ece6!important;border-radius:12px!important;min-height:42px}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid #78bfa0!important;outline-offset:2px}
+.btn{box-shadow:none!important;border-radius:12px!important}
+.btn:not(.ghost){background:#26876c!important;color:#fff!important}
+.btn.ghost{background:#f1f7f3!important;border:1px solid #e6efe8!important;color:#337457!important}
+.nx-compare-verdict{background:#f1f8f3!important;border-color:#e1efe6!important;border-radius:15px!important}
+.nx-morocco-card{background:#fcfefc!important}.date-nav{margin-bottom:22px!important}
+body.dark{--accent:#81c5a4!important;--bg:#141d19!important;--text:#e8f1e9!important;--muted:#a7b6ad!important;--glass:#1d2a23!important;--glass-strong:#1d2a23!important;--glass-border:#32453a!important;--sep:#32453a!important;--field:#26372c!important;--shadow:none!important;--v11-outline:#34473c!important;background:#141d19!important}
+body.dark .bg-art{background:#141d19!important}
+body.dark .sidebar,body.dark .circle,body.dark .card,body.dark .v10-panel,body.dark .nx-morocco,body.dark .nx-morocco-card,body.dark .nx-compare-product{background:#1d2a23!important;border-color:#34473c!important;color:#e8f1e9!important}
+body.dark .v10-primary-panel{background:#1d2a23!important}
+body.dark .sidebar .tab.active{background:#294638!important;color:#a6e3bc!important}
+body.dark input,body.dark textarea,body.dark select{background:#26372c!important;border-color:#34473c!important;color:#e8f1e9!important}
+body.dark .v10-pill,body.dark .streak,body.dark .v10-choice-icon{background:#2a4233!important;color:#b9e5c4!important;border-color:#385440!important}
+body.dark .btn.ghost{background:#2a4034!important;color:#d3ecd9!important;border-color:#3d5847!important}
+@media(max-width:760px){
+ .main{padding:18px 15px calc(110px + env(safe-area-inset-bottom))!important;margin-left:0!important}
+ .top{gap:10px!important}.top h1{font-size:23px!important}.top .sub{font-size:12px!important}
+ .v10-intro{margin-bottom:15px!important}.v10-dashboard{gap:12px!important}
+ .card,.v10-panel,.nx-morocco{border-radius:18px!important;padding:16px!important}
+ .sidebar{background:#fff!important;border:1px solid #e6eee7!important;border-radius:20px 20px 0 0!important;box-shadow:0 -6px 25px rgba(25,65,42,.035)!important}
+ .sidebar .tab[data-tab="nutri"]{background:#27866b!important;color:#fff!important;box-shadow:0 4px 12px rgba(38,135,108,.17)!important;border-color:#f7faf8!important}
+ body.dark .sidebar{background:#1d2a23!important;border-color:#34473c!important}
+ body.dark .sidebar .tab[data-tab="nutri"]{border-color:#141d19!important}
+ .nx-morocco-card{padding:13px!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}

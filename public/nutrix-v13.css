@@ -1,0 +1,20 @@
+/* Nutrix V13 Premium refinement; minimal overrides preserving existing UI. */
+#page-home .nx-fitness-summary{align-items:start!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+#page-home .nx-fitness-summary .nx-fit-stat{height:auto!important;min-height:340px!important;align-self:stretch!important}
+#page-home .nx-fit-score{justify-content:center!important;gap:17px!important}
+#page-home .nx-home-cal-visual{min-height:200px!important}
+#page-home .nx-home-macros{margin-top:6px!important}
+#page-health>.block:has(#ring-main){display:none!important}
+.nx-v13-journal{margin-top:15px;padding-top:12px;border-top:1px solid var(--sep,#d9e6dd)}
+.nx-v13-journal-heading{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:750;margin-bottom:8px;color:var(--muted,#53695b)}
+.nx-v13-item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:9px;align-items:center;padding:9px 2px;border-bottom:1px solid var(--sep,#d9e6dd)}
+.nx-v13-item strong{display:block;font-size:13px;overflow-wrap:anywhere}
+.nx-v13-item small{display:block;color:var(--muted,#53695b)}
+.nx-v13-item button{border:1px solid var(--sep,#d9e6dd);background:var(--card,#fff);color:var(--text,#173b2c);border-radius:10px;padding:8px;cursor:pointer}
+.nx-v13-settings{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.nx-v13-settings input{width:68px;padding:8px;border-radius:10px;border:1px solid var(--sep,#d9e6dd);background:var(--card,#fff);color:var(--text,#173b2c)}
+#page-home .nx-fit-line i{transition:width .65s ease}
+.nx-home-cal-ring circle:last-child{transition:stroke-dashoffset .7s ease}
+@media(max-width:720px){#page-home .nx-fitness-summary{grid-template-columns:1fr!important}#page-home .nx-fitness-summary .nx-fit-stat{min-height:260px!important;padding:18px!important}#page-home .nx-home-macros{grid-template-columns:repeat(3,minmax(0,1fr))!important}#page-home .nx-home-macro b{font-size:20px!important}}
+@media(max-width:380px){#page-home .nx-home-macros{gap:5px!important}#page-home .nx-home-macro{padding:9px 6px 15px!important}}
+@media(prefers-reduced-motion:reduce){#page-home .nx-fit-line i,.nx-home-cal-ring circle:last-child{transition:none!important}}

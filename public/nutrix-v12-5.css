@@ -1,0 +1,118 @@
+
+/* Nutrix Pro V12.5 — Precision polish */
+/* 1) hero images less tall */
+.nx-section-hero{padding:24px 26px!important;gap:22px!important}
+.nx-hero-media{min-height:180px!important;justify-content:flex-end!important}
+.nx-hero-photo-shell{width:min(100%,290px)!important;padding:10px!important;border-radius:24px!important}
+.nx-hero-photo{display:block!important;width:100%!important;aspect-ratio:4/3!important;max-height:220px!important;object-fit:cover!important;border-radius:18px!important}
+.nx-hero-badge{right:12px!important;bottom:12px!important;padding:9px 12px!important;border-radius:14px!important}
+@media(max-width:920px){
+  .nx-hero-media{justify-content:center!important;min-height:auto!important}
+  .nx-hero-photo-shell{width:min(100%,255px)!important}
+  .nx-hero-photo{max-height:180px!important}
+}
+@media(max-width:760px){
+  .nx-section-hero{padding:16px 16px!important;gap:14px!important}
+  .nx-hero-title{font-size:24px!important}
+  .nx-hero-text{font-size:13px!important;line-height:1.55!important}
+  .nx-hero-photo-shell{width:min(100%,220px)!important}
+  .nx-hero-photo{max-height:148px!important}
+}
+
+/* 2) scanner frame minimal */
+.nutri-scan-box:not([hidden]), .scan-box:not([hidden]){background:#0d1013!important}
+.v111-scan-frame{width:min(68vw,330px)!important;aspect-ratio:2.06!important;border-radius:18px!important;border:1.5px solid rgba(255,255,255,.88)!important;box-shadow:0 0 0 300vw rgba(0,0,0,.16)!important;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0))!important;display:block!important}
+.v111-scan-frame svg{opacity:0!important;filter:none!important}
+.v111-scan-frame::before,.v111-scan-frame::after{content:'';position:absolute;inset:12px;border-radius:12px;pointer-events:none}
+.v111-scan-frame::before{border:1px solid rgba(255,255,255,.15)}
+.v111-scan-hint{color:rgba(255,255,255,.86)!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-size:11px!important}
+body:has(.nutri-scan-box:not([hidden])) #nutri-scan-stop{background:rgba(255,255,255,.92)!important;color:#163126!important;box-shadow:none!important}
+
+/* 3) compact product-photo analysis */
+.ai-nutrition-panel.pro-ai-panel{display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important;gap:10px!important;padding:12px 14px!important;border-radius:18px!important;background:linear-gradient(135deg,#fbfdfb,#f2f7f4)!important;border:1px solid #dfeae4!important;box-shadow:none!important}
+.ai-nutrition-panel.pro-ai-panel > p:not(.ai-privacy-note){display:none!important}
+.ai-nutrition-heading{margin:0!important;display:flex!important;align-items:center!important;gap:10px!important}
+.ai-nutrition-heading > div{display:none!important}
+.pro-ai-icon{width:46px!important;height:46px!important;border-radius:14px!important;display:grid!important;place-items:center!important;background:#e8f3ee!important;color:#1d6b51!important;box-shadow:none!important}
+.ai-nutrition-controls{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:10px!important;margin:0!important}
+.ai-photo-label{width:48px!important;height:48px!important;min-width:48px!important;padding:0!important;justify-content:center!important;border-radius:14px!important;font-size:0!important;gap:0!important}
+.ai-photo-label .ai-label-icon{display:grid!important;place-items:center!important;width:20px!important;height:20px!important;margin:0!important}
+#ai-photo-run{width:48px!important;min-width:48px!important;height:48px!important;padding:0!important;border-radius:14px!important;font-size:0!important;position:relative}
+#ai-photo-run::before{content:'✦';font-size:18px;line-height:1}
+.ai-privacy-note{display:none!important}
+.ai-photo-preview,.ai-nutrition-result,#v5-label-verify{grid-column:1 / -1}
+.ai-photo-preview{max-height:110px!important;margin-top:8px!important}
+
+/* 4) compare centered and decorated */
+#nutri-compare-card{grid-column:1 / -1!important;justify-self:center!important;width:min(100%,980px)!important;position:relative!important;overflow:hidden!important;border-radius:26px!important;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(248,252,249,.98))!important;border:1px solid #dde9e2!important;box-shadow:0 18px 40px rgba(21,55,40,.05)!important}
+#nutri-compare-card::before,#nutri-compare-card::after{content:'';position:absolute;border-radius:999px;pointer-events:none;z-index:0}
+#nutri-compare-card::before{width:210px;height:210px;right:-85px;top:-95px;background:radial-gradient(circle, rgba(129,197,164,.18), transparent 68%)}
+#nutri-compare-card::after{width:160px;height:160px;left:-80px;bottom:-80px;background:radial-gradient(circle, rgba(244,198,111,.18), transparent 70%)}
+#nutri-compare-card > *{position:relative;z-index:1}
+#nutri-compare-card .nutri-card-head{justify-content:center!important;text-align:center!important;gap:10px!important}
+#nutri-compare-card .nutri-card-head h3{font-size:24px!important;letter-spacing:-.04em!important}
+#nutri-compare-card .nutri-compare-pickers{max-width:620px!important;margin:12px auto 16px!important}
+#nutri-compare-card #nutri-compare{max-width:860px!important;margin:0 auto!important}
+#nutri-compare-card .v5-ai-actions{justify-content:center!important}
+@media(max-width:760px){
+  #nutri-compare-card{border-radius:22px!important}
+  #nutri-compare-card .nutri-card-head h3{font-size:20px!important}
+}
+
+/* 5) Fullscreen AI like Siri */
+#v11-ai-backdrop:not([hidden]){position:fixed!important;inset:0!important;background:rgba(11,25,20,.48)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;z-index:190!important}
+#v11-ai-drawer{position:fixed!important;inset:0!important;width:100%!important;height:100dvh!important;max-width:none!important;max-height:none!important;border-radius:0!important;border:0!important;box-shadow:none!important;background:
+ radial-gradient(circle at 50% 14%, rgba(154,218,186,.22), transparent 18%),
+ radial-gradient(circle at 86% 12%, rgba(244,200,111,.14), transparent 16%),
+ linear-gradient(180deg,#f7fbf8 0%, #edf5f1 100%)!important;z-index:200!important;transform:translateY(12px)!important}
+#v11-ai-drawer.open{transform:none!important}
+#v11-ai-drawer::before{content:'';position:absolute;left:50%;top:118px;transform:translateX(-50%);width:148px;height:148px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,.92), rgba(129,197,164,.55) 58%, rgba(129,197,164,.08) 76%, rgba(129,197,164,0) 78%);filter:blur(.2px);box-shadow:0 0 0 24px rgba(129,197,164,.08),0 0 0 48px rgba(129,197,164,.05);animation:nx-siri-breathe 6.2s ease-in-out infinite;pointer-events:none;z-index:0}
+.v11-ai-top{position:sticky!important;top:0!important;z-index:4!important;padding:18px 22px!important;background:rgba(255,255,255,.58)!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important;border-bottom:1px solid rgba(29,69,54,.08)!important}
+.v11-ai-top strong{font-size:18px!important}.v11-ai-top small{font-size:12px!important;color:#5f756b!important}
+#v11-ai-close{border-radius:14px!important;background:rgba(255,255,255,.7)!important;padding:10px 12px!important}
+#v11-ai-body{position:relative!important;z-index:1!important;overflow:auto!important;padding:6px 18px 28px!important}
+#v11-ai-body .ai-shell{display:flex!important;flex-direction:column!important;gap:14px!important;max-width:940px!important;min-height:calc(100dvh - 92px)!important;margin:0 auto!important;padding:12px 0 28px!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#v11-ai-body .ai-heading,#v11-ai-body .ai-overview,#v11-ai-body .ai-label,#v11-ai-body .ai-disclaimer{display:block!important}
+#v11-ai-body .ai-heading{max-width:740px!important;margin:6px auto 0!important;padding-top:104px!important;text-align:center!important}
+#v11-ai-body .ai-heading h2{font-size:clamp(30px,5vw,54px)!important;letter-spacing:-.055em!important}
+#v11-ai-body .ai-heading p{font-size:15px!important;color:#61776d!important;max-width:62ch!important;margin:10px auto 0!important}
+#v11-ai-body .ai-symbol{display:none!important}
+#v11-ai-body .ai-disclaimer{max-width:720px!important;margin:0 auto 4px!important;text-align:center!important;background:rgba(255,255,255,.54)!important;border:1px solid rgba(29,69,54,.08)!important;border-radius:16px!important;padding:10px 14px!important;color:#53685f!important}
+#v11-ai-body .ai-overview{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;max-width:780px!important;margin:0 auto!important}
+#v11-ai-body .ai-suggestions{justify-content:center!important;gap:8px!important;max-width:820px!important;margin:0 auto!important}
+#v11-ai-body .ai-chip{background:rgba(255,255,255,.72)!important;border:1px solid rgba(29,69,54,.08)!important}
+#v11-ai-body .ai-label{text-align:center!important;margin-top:4px!important}
+#v11-ai-body .ai-chat{flex:1!important;min-height:280px!important;max-height:none!important;padding:18px!important;border-radius:28px!important;background:rgba(255,255,255,.58)!important;border:1px solid rgba(29,69,54,.08)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;box-shadow:0 14px 34px rgba(16,44,35,.05)!important}
+#v11-ai-body .ai-message{max-width:92%!important}
+#v11-ai-body .ai-compose{display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important;gap:10px!important;position:sticky!important;bottom:0!important;padding:12px!important;border-radius:22px!important;background:rgba(255,255,255,.75)!important;border:1px solid rgba(29,69,54,.08)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important}
+#v11-ai-body .ai-compose input{min-height:52px!important;border-radius:16px!important;background:#fff!important}
+#v11-ai-body .ai-compose button[type='submit']{width:54px!important;height:54px!important;border-radius:16px!important;display:grid!important;place-items:center!important;padding:0!important}
+#v11-ai-body .ai-bottom{display:flex!important;justify-content:space-between!important;gap:10px!important;align-items:center!important;padding:0 8px 6px!important}
+.nx-ai-dock{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:920px;margin:0 auto}
+.nx-ai-meta{display:flex;align-items:center;gap:10px;min-height:44px;flex-wrap:wrap}
+.nx-ai-attach-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(29,69,54,.08);font-size:12px;color:#244638}
+.nx-ai-attach-pill img{width:28px;height:28px;border-radius:10px;object-fit:cover}
+.nx-ai-actions{display:flex;align-items:center;gap:10px}
+.nx-ai-circle{width:50px;height:50px;border-radius:16px;border:1px solid rgba(29,69,54,.08);background:rgba(255,255,255,.85);display:grid;place-items:center;color:#234337;cursor:pointer;transition:transform .2s ease, background-color .2s ease, color .2s ease}
+.nx-ai-circle:hover{transform:translateY(-2px)}
+.nx-ai-circle.is-active{background:#1d6b51;color:#fff}
+.nx-ai-circle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+body.dark #v11-ai-drawer{background:radial-gradient(circle at 50% 14%, rgba(129,197,164,.18), transparent 16%), linear-gradient(180deg,#141d19 0%, #17221d 100%)!important}
+body.dark .v11-ai-top,body.dark #v11-ai-body .ai-chat,body.dark #v11-ai-body .ai-compose,body.dark #v11-ai-body .ai-disclaimer,body.dark .nx-ai-circle,body.dark .nx-ai-attach-pill{background:rgba(29,42,35,.8)!important;border-color:rgba(129,197,164,.12)!important;color:#e8f1e9!important}
+body.dark #v11-ai-close{background:rgba(29,42,35,.82)!important}
+body.dark #v11-ai-body .ai-heading p,body.dark .v11-ai-top small{color:#a9bbb0!important}
+body.dark #v11-ai-body .ai-compose input{background:#223128!important;color:#eef7f0!important;border-color:#33463b!important}
+@media(max-width:760px){
+  #v11-ai-drawer::before{top:102px;width:118px;height:118px;box-shadow:0 0 0 20px rgba(129,197,164,.07),0 0 0 40px rgba(129,197,164,.04)}
+  #v11-ai-body{padding:4px 12px 18px!important}
+  #v11-ai-body .ai-shell{min-height:calc(100dvh - 78px)!important}
+  #v11-ai-body .ai-heading{padding-top:86px!important}
+  #v11-ai-body .ai-heading h2{font-size:28px!important}
+  #v11-ai-body .ai-overview{grid-template-columns:1fr!important}
+  #v11-ai-body .ai-chat{min-height:220px!important;border-radius:22px!important}
+  #v11-ai-body .ai-compose{grid-template-columns:auto 1fr auto!important;padding:10px!important;border-radius:18px!important}
+  .nx-ai-dock{flex-direction:column;align-items:stretch}
+  .nx-ai-actions{justify-content:flex-end}
+}
+@keyframes nx-siri-breathe{0%,100%{transform:translateX(-50%) scale(1);opacity:.95}50%{transform:translateX(-50%) scale(1.08);opacity:1}}
+@media(prefers-reduced-motion:reduce){#v11-ai-drawer::before{animation:none!important}}

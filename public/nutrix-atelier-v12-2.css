@@ -1,0 +1,215 @@
+
+/* Nutrix Pro V12.3 — Animated Pro Layer */
+:root{
+  --nx-hero-bg: linear-gradient(135deg, #f8fcf9 0%, #edf7f2 100%);
+  --nx-hero-border: rgba(39, 105, 82, .10);
+  --nx-hero-shadow: 0 28px 60px rgba(22, 61, 46, .08);
+  --nx-hero-text: #1f3a31;
+  --nx-hero-muted: #6c8178;
+}
+body{
+  background-image: radial-gradient(circle at top right, rgba(124,191,158,.12), transparent 28%), radial-gradient(circle at left 20%, rgba(232, 243, 236, .9), transparent 20%);
+}
+.main{position:relative}
+.page{position:relative}
+
+.nx-section-hero{
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(260px,.9fr);
+  align-items:center;
+  gap:26px;
+  margin:0 0 22px;
+  padding:28px 30px;
+  background:var(--nx-hero-bg);
+  border:1px solid var(--nx-hero-border);
+  border-radius:28px;
+  box-shadow:var(--nx-hero-shadow);
+  isolation:isolate;
+}
+.nx-section-hero::before,
+.nx-section-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto;
+  border-radius:999px;
+  filter:blur(4px);
+  z-index:-1;
+}
+.nx-section-hero::before{width:220px;height:220px;right:-30px;top:-40px;background:rgba(106,185,146,.18)}
+.nx-section-hero::after{width:160px;height:160px;left:-30px;bottom:-40px;background:rgba(245,201,123,.15)}
+.nx-hero-copy{display:flex;flex-direction:column;gap:14px;min-width:0}
+.nx-hero-kicker{
+  align-self:flex-start;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(39,105,82,.08);
+  color:#2b6f57;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.12em;
+}
+.nx-hero-title{
+  margin:0;
+  color:var(--nx-hero-text);
+  font-size:clamp(28px, 3.8vw, 44px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+}
+.nx-hero-text{
+  max-width:60ch;
+  margin:0;
+  color:var(--nx-hero-muted);
+  font-size:15px;
+  line-height:1.65;
+}
+.nx-hero-points{display:flex;flex-wrap:wrap;gap:10px}
+.nx-hero-point{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(39,105,82,.08);
+  padding:9px 12px;border-radius:999px;
+  color:#274d3f;font-size:13px;font-weight:600;
+}
+.nx-hero-point i{
+  width:8px;height:8px;border-radius:50%;background:#2b8a6e;display:inline-block;
+  box-shadow:0 0 0 5px rgba(43,138,110,.10)
+}
+.nx-hero-media{position:relative;display:flex;justify-content:center;align-items:center;min-height:250px}
+.nx-hero-orb{
+  position:absolute;border-radius:999px;z-index:0;opacity:.65;filter:blur(.2px);
+  animation:nx-orbit 12s ease-in-out infinite;
+}
+.nx-hero-orb--one{width:90px;height:90px;right:10%;top:8%;background:rgba(244,198,73,.25)}
+.nx-hero-orb--two{width:54px;height:54px;left:8%;top:18%;background:rgba(111,191,146,.22);animation-delay:-2s}
+.nx-hero-orb--three{width:70px;height:70px;left:16%;bottom:12%;background:rgba(134,174,225,.18);animation-delay:-4s}
+.nx-hero-photo-shell{
+  position:relative;
+  width:min(100%, 380px);
+  padding:16px;
+  border-radius:30px;
+  background:linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.6));
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 22px 50px rgba(17,44,35,.10);
+  backdrop-filter:blur(16px);
+  transform:translate3d(var(--mx,0), var(--my,0), 0);
+  transition:transform .28s ease;
+  z-index:1;
+}
+.nx-hero-photo{
+  width:100%;display:block;border-radius:22px;object-fit:cover;
+  animation:nx-float 6.4s ease-in-out infinite;
+}
+.nx-hero-badge{
+  position:absolute;right:18px;bottom:18px;display:flex;gap:8px;align-items:center;
+  padding:10px 14px;border-radius:16px;background:rgba(255,255,255,.92);
+  border:1px solid rgba(39,105,82,.10);box-shadow:0 14px 30px rgba(17,44,35,.12);
+  color:#234337;font-size:13px;font-weight:700;
+}
+.nx-hero-badge span{display:block;color:#6c8178;font-size:11px;font-weight:600}
+
+#page-home .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#f7fbf8 0%,#edf8f2 100%)}
+#page-health .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#f8fcf8 0%,#eef8f3 100%)}
+#page-journal .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#f8fbf9 0%,#edf6f2 100%)}
+#page-nutri .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#f7faf8 0%,#edf7f1 100%)}
+#page-ai .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#f8fbf8 0%,#edf7f2 100%)}
+#page-faq .nx-section-hero{--nx-hero-bg:linear-gradient(135deg,#fbfcfb 0%,#eef7f2 100%)}
+
+.v10-panel,.card,.explore-panel,.nx-morocco,.space-module,.v111-about article,.ai-chip,.v11-shortcuts button{
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease, background-color .28s ease;
+}
+.v10-panel:hover,.card:hover,.explore-panel:hover,.nx-morocco:hover,.space-module:hover,.v111-about article:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(21,55,40,.07)!important;
+  border-color:#d7e8df!important;
+}
+.v10-scan-choice,.chip-btn,.btn,.sidebar .tab,.circle,.v11-shortcuts button,.ai-chip{
+  transition:transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+.v10-scan-choice:hover,.chip-btn:hover,.btn:hover,.sidebar .tab:hover,.circle:hover,.v11-shortcuts button:hover,.ai-chip:hover{transform:translateY(-2px)}
+.btn:not(.ghost){box-shadow:0 10px 20px rgba(38,135,108,.18)!important}
+
+.explore-hero,.nutri-hero,.ai-heading,.v111-about,.hero.card{
+  position:relative;overflow:hidden;
+}
+.explore-hero::after,.nutri-hero::after,.ai-heading::after,.v111-about::after,.hero.card::after{
+  content:"";position:absolute;inset:auto -60px -60px auto;width:180px;height:180px;border-radius:999px;background:radial-gradient(circle, rgba(96,176,139,.14), transparent 70%);pointer-events:none;
+}
+
+/* reveal-on-scroll */
+body.has-js-motion .reveal-up{opacity:0;transform:translateY(28px) scale(.985)}
+body.has-js-motion .reveal-up.is-visible{opacity:1;transform:none;transition:opacity .55s ease, transform .55s cubic-bezier(.2,.65,.2,1)}
+body.has-js-motion .reveal-up:nth-child(2){transition-delay:.04s}
+body.has-js-motion .reveal-up:nth-child(3){transition-delay:.08s}
+body.has-js-motion .reveal-up:nth-child(4){transition-delay:.12s}
+body.has-js-motion .reveal-up:nth-child(5){transition-delay:.16s}
+
+/* smarter spacing to simplify the UI */
+.v10-dashboard,.explore-panels,.nutri-top-grid,.nutri-detail-grid{gap:18px!important}
+.block{gap:18px!important}
+.v11-shortcuts{margin-top:4px!important}
+.nutri-hero,.explore-hero,.ai-shell,.v111-about{border-radius:24px!important}
+
+/* mobile */
+@media (max-width: 920px){
+  .nx-section-hero{grid-template-columns:1fr;gap:18px;padding:22px 18px;border-radius:24px}
+  .nx-hero-text{max-width:none;font-size:14px}
+  .nx-hero-media{min-height:auto}
+  .nx-hero-photo-shell{width:min(100%, 460px);margin-inline:auto}
+  .nx-hero-title{font-size:30px}
+}
+@media (max-width:760px){
+  .nx-section-hero{margin-bottom:16px;padding:18px 16px;border-radius:22px}
+  .nx-hero-kicker{font-size:11px;padding:7px 10px}
+  .nx-hero-title{font-size:26px}
+  .nx-hero-points{gap:8px}
+  .nx-hero-point{font-size:12px;padding:8px 10px}
+  .nx-hero-photo-shell{padding:10px;border-radius:22px}
+  .v10-dashboard,.explore-panels,.nutri-top-grid,.nutri-detail-grid,.block{gap:12px!important}
+}
+
+@keyframes nx-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes nx-orbit{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-16px) scale(1.06)}}
+
+body.dark{
+  background-image: radial-gradient(circle at top right, rgba(99,165,133,.10), transparent 28%), radial-gradient(circle at left 20%, rgba(31,48,39,.7), transparent 20%);
+}
+body.dark .nx-section-hero{
+  --nx-hero-bg:linear-gradient(135deg, rgba(31,45,38,.95) 0%, rgba(27,39,33,.98) 100%);
+  --nx-hero-border: rgba(129,197,164,.12);
+  --nx-hero-shadow: none;
+  --nx-hero-text:#eef7f0;
+  --nx-hero-muted:#afc1b5;
+}
+body.dark .nx-hero-kicker,
+body.dark .nx-hero-point,
+body.dark .nx-hero-badge,
+body.dark .nx-hero-photo-shell{background:rgba(33,47,39,.88);border-color:rgba(129,197,164,.10);color:#e7f1e9}
+body.dark .nx-hero-badge span{color:#b0c1b6}
+body.dark .explore-hero::after,body.dark .nutri-hero::after,body.dark .ai-heading::after,body.dark .v111-about::after,body.dark .hero.card::after{background:radial-gradient(circle, rgba(115,191,154,.14), transparent 72%)}
+body.dark .v10-panel:hover,body.dark .card:hover,body.dark .explore-panel:hover,body.dark .nx-morocco:hover,body.dark .space-module:hover,body.dark .v111-about article:hover{box-shadow:none!important;border-color:#44624f!important}
+
+@media (prefers-reduced-motion: reduce){
+  .nx-hero-photo,.nx-hero-orb{animation:none!important}
+  .nx-hero-photo-shell,.v10-panel,.card,.explore-panel,.nx-morocco,.space-module,.v111-about article,.ai-chip,.v11-shortcuts button,.v10-scan-choice,.chip-btn,.btn,.sidebar .tab,.circle{transition:none!important}
+}
+
+/* V12.4 cinematic micro-motion: continuous but restrained */
+.nx-section-hero{animation:nx-hero-enter .72s cubic-bezier(.16,1,.3,1) both}
+.nx-hero-media{perspective:900px}
+.nx-hero-photo-shell{overflow:hidden;transform-style:preserve-3d;will-change:transform}
+.nx-hero-photo{aspect-ratio:4/3;object-fit:cover;animation:nx-photo-breathe 12s ease-in-out infinite alternate;will-change:transform}
+.nx-hero-photo-shell:hover .nx-hero-photo{animation-play-state:paused;transform:scale(1.055)}
+.nx-hero-badge{z-index:2;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nx-hero-orb{animation-duration:16s}
+.nx-hero-title{max-width:18ch}
+.nx-hero-copy{position:relative;z-index:2}
+.nx-hero-kicker{box-shadow:0 3px 10px rgba(36,95,66,.04)}
+.v10-panel,.explore-panel,.card{backface-visibility:hidden}
+button:active:not(:disabled){transform:scale(.985)!important}
+@keyframes nx-hero-enter{from{opacity:0;transform:translate3d(0,16px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes nx-photo-breathe{0%{transform:scale(1.015) translate3d(-.3%,0,0)}100%{transform:scale(1.075) translate3d(.3%,-.35%,0)}}
+@media(max-width:760px){.nx-hero-photo{max-height:230px;object-position:center 55%}.nx-hero-title{max-width:25ch}.nx-hero-media{min-height:0}.nx-hero-badge{right:16px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){.nx-section-hero,.nx-hero-photo{animation:none!important}.nx-hero-photo-shell:hover .nx-hero-photo{transform:none!important}.has-js-motion .reveal-up{opacity:1!important;transform:none!important}}
